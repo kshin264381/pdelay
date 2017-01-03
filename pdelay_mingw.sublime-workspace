@@ -1,0 +1,472 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/NBody/nbody.cc",
+			"settings":
+			{
+				"buffer_size": 38511,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/NBody/nbody.h",
+			"settings":
+			{
+				"buffer_size": 9614,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/NBody/typedefs.h",
+			"settings":
+			{
+				"buffer_size": 406,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/Anaconda.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 386.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 162.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			"Pathway.py"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/workshop/MonteCarlo/geant4/silicon_xray/pdelay",
+		"/D/workshop/MonteCarlo/geant4/silicon_xray/pdelay/src",
+		"/D/workshop/MonteCarlo/geant4/silicon_xray/pdelay/src/NBody"
+	],
+	"file_history":
+	[
+		"/E/To Keithley 4200/pyview_example.py",
+		"/D/workshop/MonteCarlo/geant4/silicon_xray/pdelay/pdelay_mingw.sublime-project",
+		"/D/workshop/PyTCADTools/DetectorModelMaker/src/parameters.json",
+		"/D/workshop/PyTCADTools/DetectorModelMaker/src/NinN.py",
+		"/D/workshop/PyTCADTools/DetectorModelMaker/src/DetectorModelMaker.py",
+		"/D/workshop/PyTCADTools/DetectorModelMaker/src/Syntax.py",
+		"/D/workshop/PyTCADTools/DetectorModelMaker/src/eq_parser.py",
+		"/D/workshop/PyTCADTools/DetectorModelMaker/src/PartGenerator.py",
+		"/home/oxygen/KSHIN/Desktop/workshop/PyTCADTools/DetectorModelMaker/src/NinN.py",
+		"/home/oxygen/KSHIN/Desktop/workshop/PyTCADTools/DetectorModelMaker/src/CoordGenerator.py",
+		"/home/oxygen/KSHIN/Desktop/workshop/PyTCADTools/DetectorModelMaker/src/NinP.py",
+		"/home/oxygen/KSHIN/Desktop/workshop/AGIPD/BNL/decks/BNL_GRBD_ANL_D1R1.in",
+		"/home/oxygen/KSHIN/Desktop/workshop/AGIPD/BNL/decks/BNL_GRBD_ANL_D2R1.in",
+		"/home/oxygen/KSHIN/Desktop/workshop/AGIPD/BNL/decks/BNL_GRBD_ANL_D5R1.in",
+		"/home/oxygen/KSHIN/Desktop/workshop/AGIPD/BNL/decks/BNL_GRBD_ANL_D6R1.in",
+		"/home/oxygen31/KSHIN/.config/sublime-text-3/Packages/User/Anaconda.sublime-settings",
+		"/home/oxygen31/KSHIN/.config/sublime-text-3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/home/oxygen31/KSHIN/.config/sublime-text-3/Packages/User/AutoPep8.sublime-settings",
+		"/home/oxygen31/KSHIN/.config/sublime-text-3/Packages/AutoPEP8/AutoPep8.sublime-settings",
+		"/home/oxygen31/KSHIN/.config/sublime-text-3/Packages/Djaneiro/Settings/Python (Django).sublime-settings",
+		"/home/oxygen31/KSHIN/workshop/PyTCADTools/DetectorModelMaker/src/NinN.py",
+		"/home/oxygen31/KSHIN/workshop/PyTCADTools/DetectorModelMaker/src/CoordGenerator.py",
+		"/home/oxygen31/KSHIN/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/oxygen31/KSHIN/workshop/PyTCADTools/DetectorModelMaker/DetectorModelMaker.sublime-project",
+		"/home/oxygen31/KSHIN/workshop/PyTCADTools/DetectorModelMaker/Makefile",
+		"/home/oxygen31/KSHIN/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/oxygen31/KSHIN/.config/sublime-text-3/Packages/User/Python Django.sublime-settings",
+		"/home/oxygen31/KSHIN/.config/sublime-text-3/Packages/User/Pathway.py",
+		"/home/oxygen31/KSHIN/.config/sublime-text-3/Packages/User/Python.sublime-settings",
+		"/home/oxygen/KSHIN/Desktop/workshop/PyTCADTools/DetectorModelMaker/src/PartGenerator.py",
+		"/home/oxygen31/KSHIN/workshop/PyTCADTools/DetectorModelMaker/src/NinP.py",
+		"/home/oxygen/KSHIN/Desktop/workshop/PyTCADTools/DetectorModelMaker/src/ModelMaker.py",
+		"/home/oxygen/KSHIN/Desktop/workshop/PyTCADTools/DetectorModelMaker/src/PinN.py",
+		"/C/Users/kshin/Desktop/workshop/PyTCADTools/DetectorModelMaker/DetectorModelMaker.sublime-project",
+		"/C/Users/kshin/Desktop/workshop/PyTCADTools/DetectorModelMaker/make.bat",
+		"/C/Users/kshin/Desktop/workshop/PyTCADTools/DetectorModelMaker/clean.bat",
+		"/C/Users/kshin/Desktop/workshop/PyTCADTools/DetectorModelMaker/src/eq_parser.py",
+		"/C/Users/kshin/Desktop/workshop/PyTCADTools/DetectorModelMaker/src/DetectorModelMaker.py",
+		"/C/Users/kshin/Desktop/workshop/PyTCADTools/DetectorModelMaker/src/PixelModelMaker.py",
+		"/C/Users/kshin/Desktop/workshop/PyTCADTools/DetectorModelMaker/src/GRModelMaker.py",
+		"/C/Users/kshin/Desktop/workshop/PyTCADTools/PixelModelMaker/PixelModelMaker.py",
+		"/C/Users/kshin/Desktop/workshop/PyTCADTools/PixelModelMaker/parameters.json",
+		"/C/Users/kshin/Desktop/workshop/MonteCarlo/geant4/silicon_xray/plot.C",
+		"/C/Users/kshin/Desktop/workshop/MonteCarlo/geant4/silicon_xray/src/TrackingAction.cc",
+		"/C/Users/kshin/Desktop/workshop/MonteCarlo/geant4/silicon_xray/src/SteppingAction.cc",
+		"/C/Users/kshin/Desktop/workshop/MonteCarlo/geant4/silicon_xray/src/PhysicsList.cc",
+		"/C/Users/kshin/Desktop/workshop/MonteCarlo/geant4/silicon_xray/src/EventAction.cc",
+		"/C/Users/kshin/Desktop/workshop/DQE_Model/cythonize.py",
+		"/C/Users/kshin/Desktop/workshop/MonteCarlo/geant4/silicon_xray/include/TrackingAction.hh",
+		"/C/Users/kshin/Desktop/workshop/MonteCarlo/geant4/silicon_xray/src/PrimaryGeneratorAction.cc",
+		"/C/Users/kshin/Desktop/workshop/MonteCarlo/geant4/silicon_xray/src/ActionInitialization.cc",
+		"/C/Users/kshin/Desktop/workshop/MonteCarlo/geant4/silicon_xray/src/DetectorConstruction.cc",
+		"/C/Users/kshin/Desktop/workshop/PyTCADTools/FitDoping/FitDoping.py",
+		"/C/Users/kshin/Desktop/workshop/PyTCADTools/FitDoping/CurveFit.py",
+		"/C/Users/kshin/Box Sync/workshop/PyTCADTools/FitDoping/FitDoping.py",
+		"/C/Users/kshin/Box Sync/workshop/PyTCADTools/FitDoping/xls.py",
+		"/C/Users/kshin/Box Sync/workshop/PyTCADTools/FitDoping/Optimize.py",
+		"/C/Users/kshin/Box Sync/workshop/PyTCADTools/FitDoping/CurveFit.py",
+		"/C/Program Files (x86)/pyPENELOPE/fortran/penelope/pendbase/readme.txt",
+		"/C/Users/kshin/Box Sync/workshop/MonteCarlo/penEasy-v20150530/documentation/dependencies.txt",
+		"/C/Users/kshin/Box Sync/workshop/PyTCADTools/FitDoping/SpreadSheet.py",
+		"/C/Users/kshin/Box Sync/FASPAX_Measurements/July13th2015_Fermi_Visit/Novati_Pixel_Test/pstop_8_set1-2_VB_open",
+		"/C/Users/kshin/Box Sync/FASPAX_Measurements/July13th2015_Fermi_Visit/Novati_Pixel_Test/pstop_10_VB_open-v4",
+		"/C/Users/kshin/Box Sync/FASPAX_Measurements/July13th2015_Fermi_Visit/Novati_Pixel_Test/pstop_10_VB_50",
+		"/C/Users/kshin/Box Sync/FASPAX_Measurements/July13th2015_Fermi_Visit/Novati_Pixel_Test/pstop_8_set1-4_VB_open",
+		"/C/Users/kshin/Box Sync/FASPAX_Measurements/July13th2015_Fermi_Visit/Novati_Pixel_Test/pstop_09_VB_open-v2",
+		"/C/Users/kshin/Box Sync/Basics/doping_fit/CurveFit.py",
+		"/C/WinPython/python-3.4.3/Lib/site-packages/PyQwt-5.2.1.dist-info/METADATA",
+		"/C/WinPython/python-3.4.3/Lib/site-packages/PyQwt-5.2.1.dist-info/RECORD",
+		"/C/WinPython/python-3.4.3/Lib/site-packages/PyQwt-5.2.1.dist-info/top_level.txt",
+		"/C/WinPython/python-3.4.3/Lib/site-packages/PyQt4/plugins/designer/python/matplotlibplugin.py",
+		"/C/WinPython/python-3.4.3/Lib/site-packages/PyQt4/plugins/designer/python/imageplotplugin.py",
+		"/C/WinPython/python-3.4.3/Lib/site-packages/PyQt4/plugins/designer/python/plotplugin.py",
+		"/C/WinPython/python-3.4.3/Lib/site-packages/PyQt4/pyqtconfig.py",
+		"/C/WinPython/python-3.4.3/Lib/site-packages/matplotlibwidget.py",
+		"/C/Users/kshin/Box Sync/Basics/doping_fit/FitDoping.py",
+		"/C/Users/kshin/AppData/Roaming/Hummingbird/Connectivity/14.00/FTP/Hclftp/cache/view/FitDoping.py",
+		"/C/WinPython/python-3.4.3/Lib/site-packages/pyqtgraph/widgets/MatplotlibWidget.py",
+		"/C/Users/kshin/Box Sync/Basics/doping_fit/doping_fit.sublime-project",
+		"/C/Users/kshin/Box Sync/Basics/doping_fit/SpreadSheet.py",
+		"/C/Users/kshin/Desktop/doping_fit/FitDoping.py",
+		"/C/Users/kshin/Desktop/doping_fit/CurveFit.py",
+		"/C/Users/kshin/Desktop/doping_fit/SpreadSheet.py",
+		"/C/Users/kshin/Desktop/doping_fit/FitDoping.spec",
+		"/C/WinPython/python-3.4.3/lib/site-packages/scipy/optimize/minpack.py",
+		"/C/Users/kshin/Desktop/doping_fit/example_data.txt",
+		"/C/Users/kshin/Box Sync/Basics/Resistivity to Concentration/res2conc.py",
+		"/C/Users/kshin/Desktop/doping_fit/DoFit.py",
+		"/C/Users/kshin/Desktop/doping_fit/doping_fit.py",
+		"/C/WinPython/python-3.4.3/pip_upgrade.py",
+		"/D/crosslig/apsys_examples/solar_cell/silicon/PIN/solar.sol",
+		"/D/crosslig/apsys_examples/solar_cell/silicon/PIN/Macro_Si.mac",
+		"/D/crosslig/apsys_examples/basic_silicon/diode/diod.sol",
+		"/D/crosslig/apsys_examples/basic_silicon/npn/dc/npn.sol",
+		"/D/crosslig/apsys_examples/A_tutorial/camel.sol",
+		"/D/crosslig/apsys_examples/typeII_PD/type2_pd.sol",
+		"/D/crosslig/apsys_examples/basic_silicon/npn/dc/npn.plt",
+		"/D/crosslig/apsys_examples/basic_silicon/impact_mos/nmosA.sol",
+		"/D/crosslig/apsys_examples/basic_silicon/impact_mos/nmosA.mater",
+		"/D/crosslig/apsys_examples/basic_silicon/impact_mos/nmosA.geo",
+		"/D/crosslig/apsys_examples/basic_silicon/impact_mos/nmosA.layer",
+		"/D/crosslig/apsys_examples/basic_silicon/diode/diod.mater",
+		"/D/crosslig/apsys_examples/basic_silicon/diode/diod.layer",
+		"/C/Users/kshin/Box Sync/FASPAX_Simulations/Crosslight Test/agpid_test_laymat.txt",
+		"/D/crosslig/apsys_examples/solar_cell/Si_simple/solar.mater",
+		"/D/crosslig/apsys_examples/solar_cell/Si_simple/solar.mplt",
+		"/D/crosslig/apsys_examples/solar_cell/Si_simple/solar.plt",
+		"/D/crosslig/apsys_examples/solar_cell/Si_simple/solar.sol",
+		"/C/Users/kshin/Box Sync/FASPAX_Simulations/Crosslight Test/agpid_test.msh",
+		"/C/Users/kshin/Box Sync/FASPAX_Measurements/June15th2015_Fermi_Visit/Test4-140V-finescan-8gr100um-smallimplants.txt",
+		"/C/Users/kshin/Box Sync/Basics/Attenuation/Attenuation.py",
+		"/C/Users/kshin/Box Sync/Basics/Attenuation/Attenuation_Si.py",
+		"/C/Users/kshin/Box Sync/FASPAX_Measurements/June15th2015_Fermi_Visit/Test3-130V-8gr100um-smallimplants.txt",
+		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/WinPython/python-3.4.3/lib/site-packages/matplotlib/pyplot.py",
+		"/C/WinPython/python-3.4.3/lib/site-packages/matplotlib/axes/_base.py",
+		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/User/Pathway.py",
+		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/SublimePythonIDE/SublimePython.sublime-settings",
+		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/User/Python.sublime-settings",
+		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/User/SublimePython.sublime-settings",
+		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/User/Python Django.sublime-settings",
+		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-build",
+		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"eval",
+			"re",
+			"math",
+			"operator",
+			"pyparsing",
+			"__parse_equation",
+			"print"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/NBody/nbody.cc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 38511,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/C++11/C++11.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "src/NBody/nbody.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9614,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1116.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/NBody/typedefs.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 406,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								273,
+								273
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.autopep8":
+	{
+		"height": 118.0
+	},
+	"output.exec":
+	{
+		"height": 210.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Anaconda Python Builder",
+	"project": "pdelay_mingw.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 302.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

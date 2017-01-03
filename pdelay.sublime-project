@@ -1,0 +1,58 @@
+{
+	"build_systems":
+	[
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Run pydelay with 10.tar.bz2",
+			"shell_cmd":
+			[
+				"make && ./src/pdelay 10.tar.bz2"
+			],
+			"working_dir": "${project_path}"
+		},
+		{
+			"cmd":
+			[
+				"make",
+				"-j",
+				"8"
+			],
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Make pydelay",
+			"working_dir": "${project_path}"
+		},
+		{
+			"cmd":
+			[
+				"make clean"
+			],
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Clean pydelay",
+			"working_dir": "${project_path}"
+		},
+		{
+			"cmd":
+			[
+				"make distclean"
+			],
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Purge pydelay",
+			"working_dir": "${project_path}"
+		},
+		{
+			"cmd":
+			[
+				"./bootstrap.sh"
+			],
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Configure pydelay",
+			"working_dir": "${project_path}"
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	]
+}

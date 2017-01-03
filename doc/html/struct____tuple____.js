@@ -1,0 +1,28 @@
+var struct____tuple____ =
+[
+    [ "_abs", "struct____tuple____.html#a03097f519c86a474fa95c120a433e039", null ],
+    [ "_isnan", "struct____tuple____.html#ac460b788fa66a8956179c120299bfc04", null ],
+    [ "_norm", "struct____tuple____.html#a6df14ae5774e897b215e6399db2a7ab9", null ],
+    [ "direction", "struct____tuple____.html#a89843fe028233b8093d545acbe7297db", null ],
+    [ "dist", "struct____tuple____.html#ae4dd3b1bb711c1bc95d01b65258ef72c", null ],
+    [ "operator!=", "struct____tuple____.html#a1b402a07d35ba759cf937c3ee1870d8f", null ],
+    [ "operator*", "struct____tuple____.html#afb34bae6bbb037de9967ca93c7c531d5", null ],
+    [ "operator*", "struct____tuple____.html#a0a6218b0d6ab0eca1f4e3258511b8d14", null ],
+    [ "operator*=", "struct____tuple____.html#ac3252b80218fbd6b81b2b66a436277a9", null ],
+    [ "operator*=", "struct____tuple____.html#ab98ba2ebb5fe5ddf08aba1578e78bff1", null ],
+    [ "operator+", "struct____tuple____.html#a109eb71b0ec9fc28aaabe6a2f3254cb2", null ],
+    [ "operator+", "struct____tuple____.html#a56183b74ad117178dba76d4b287fadb2", null ],
+    [ "operator+=", "struct____tuple____.html#a85fa3ceb0c498ed2b511b08047bbad89", null ],
+    [ "operator+=", "struct____tuple____.html#a32bab49e0ce134f6489162e996cd6a42", null ],
+    [ "operator-", "struct____tuple____.html#a6282137888f75afc22a00ab844ce71e0", null ],
+    [ "operator-", "struct____tuple____.html#ab8862391eab07b73f6538ade0dcc4aaa", null ],
+    [ "operator-=", "struct____tuple____.html#aa1148252c7ceb39ec74a4d2912699d16", null ],
+    [ "operator-=", "struct____tuple____.html#a3882321d25a01f0a54f3243c66791c77", null ],
+    [ "operator/", "struct____tuple____.html#a25d10baac41a764345c439c81570b1d7", null ],
+    [ "operator/", "struct____tuple____.html#aeee8d5c1571eb91df25241b4cda59301", null ],
+    [ "operator/=", "struct____tuple____.html#af8bd9ec133a44b3a308974e28806b7c4", null ],
+    [ "operator/=", "struct____tuple____.html#a959af530ede1801fbd522ee09006cf41", null ],
+    [ "operator==", "struct____tuple____.html#a88d287db0c51434e7a93dc4f88ba7a73", null ],
+    [ "x", "struct____tuple____.html#a66973abf8bcae56760eb790d35e4d85f", null ],
+    [ "y", "struct____tuple____.html#a22ef961c9390b9d1d2776fabe773d403", null ]
+];

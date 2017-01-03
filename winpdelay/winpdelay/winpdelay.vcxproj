@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{56C654DF-FC24-4278-BFFA-974F357528AB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>winpdelay</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseIntelMKL>No</UseIntelMKL>
+    <UseILP64Interfaces>false</UseILP64Interfaces>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\utils;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\TCAD;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\physics;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\NBody;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\winpdelay\sqlite3;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\octree;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\utils;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\TCAD;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\physics;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\NBody;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\winpdelay\sqlite3;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\octree;E:\Libs\boost_1_62_0;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\utils;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\TCAD;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\physics;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\NBody;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\winpdelay\sqlite3;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\octree;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\utils;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\TCAD;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\physics;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\NBody;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\winpdelay\sqlite3;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\octree;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Libs\boost_1_61_0;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\physics;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\utils;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\NBody;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\database;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\winpdelay\sqlite3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OpenMPSupport>true</OpenMPSupport>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OcTree.lib;PDelay_TCAD.lib;Sqlite3Lib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\Libs\boost_1_61_0\stage\lib;$(OutDir);$(SolutionDir)x86\$(IntDir);$(SolutionDir)x64\$(IntDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ShowProgress>LinkVerbose</ShowProgress>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(TargetDir)database;
+copy /Y $(SolutionDir)Materials.db $(TargetDir)database\;
+copy /Y $(SolutionDir)test.tar.bz2 $(TargetDir)
+copy /Y $(SolutionDir)test_data.dbt $(TargetDir)</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>rd /s /q $(TargetDir)\database;
+del $(TargetDir)\*.db;
+del $(TargetDir)\*.db-journal;
+del $(TargetDir)\*.log;
+del $(TargetDir)\*.dbt;
+del $(TargetDir)\*.tar.bz2;
+del $(LocalDebuggerWorkingDirectory)\*.db $(LocalDebuggerWorkingDirectory)\*.db-journal $(LocalDebuggerWorkingDirectory)\*.log;
+</Command>
+    </PreBuildEvent>
+    <ProjectReference />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>E:\Libs\boost_1_62_0;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\utils;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\TCAD;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\octree;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\physics;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\NBody;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\BHTree;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\sqlite3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OpenMPSupport>true</OpenMPSupport>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>BHTree.lib;PDelay_TCAD.lib;Sqlite3Lib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\Libs\boost_1_62_0\stage\lib;$(OutDir);$(SolutionDir)x86\$(IntDir);$(SolutionDir)x64\$(IntDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ShowProgress>LinkVerbose</ShowProgress>
+      <StackReserveSize>
+      </StackReserveSize>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(TargetDir)database;
+copy /Y $(SolutionDir)Materials.db $(TargetDir)database\;
+copy /Y $(SolutionDir)test.tar.bz2 $(TargetDir)
+copy /Y $(SolutionDir)test_data.dbt $(TargetDir)</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>rd /s /q $(TargetDir)\database;
+del $(TargetDir)\*.db;
+del $(TargetDir)\*.db-journal;
+del $(TargetDir)\*.log;
+del $(TargetDir)\*.dbt;
+del $(TargetDir)\*.tar.bz2;
+del $(LocalDebuggerWorkingDirectory)\*.db $(LocalDebuggerWorkingDirectory)\*.db-journal $(LocalDebuggerWorkingDirectory)\*.log;
+</Command>
+    </PreBuildEvent>
+    <ProjectReference />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OcTree.lib;Sqlite3Lib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\Libs\boost_1_61_0\stage\lib;$(OutDir);$(SolutionDir)x86\$(IntDir);$(SolutionDir)x64\$(IntDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>E:\Libs\boost_1_61_0;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\utils;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\TCAD;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\octree;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\physics;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\NBody;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\BHTree;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\sqlite3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>BHTree.lib;PDelay_TCAD.lib;Sqlite3Lib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\Libs\boost_1_61_0\stage\lib;$(OutDir);$(SolutionDir)x86\$(IntDir);$(SolutionDir)x64\$(IntDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\NBody\carrier.h" />
+    <ClInclude Include="..\..\src\NBody\load_carr.h" />
+    <ClInclude Include="..\..\src\NBody\nbody.h" />
+    <ClInclude Include="..\..\src\NBody\nbody_octree.h" />
+    <ClInclude Include="..\..\src\NBody\sim_file_io.h" />
+    <ClInclude Include="..\..\src\NBody\sim_progress.h" />
+    <ClInclude Include="..\..\src\NBody\sqlite_mt.h" />
+    <ClInclude Include="..\..\src\NBody\typedefs.h" />
+    <ClInclude Include="..\..\src\NBody\visual.h" />
+    <ClInclude Include="..\..\src\pdelay.h" />
+    <ClInclude Include="..\..\src\physics\CTCForce.h" />
+    <ClInclude Include="..\..\src\physics\materials.h" />
+    <ClInclude Include="..\..\src\physics\physical_constants.h" />
+    <ClInclude Include="..\..\src\physics\recombination.h" />
+    <ClInclude Include="..\..\src\physics\recombination_nbody.h" />
+    <ClInclude Include="..\..\src\physics\SimCondition.h" />
+    <ClInclude Include="..\..\src\physics\sim_space.h" />
+    <ClInclude Include="..\..\src\sim_dimension.h" />
+    <ClInclude Include="..\..\src\utils\cxxopts.h" />
+    <ClInclude Include="..\..\src\utils\datatype_hash.h" />
+    <ClInclude Include="..\..\src\utils\decor_output.h" />
+    <ClInclude Include="..\..\src\utils\fputils.h" />
+    <ClInclude Include="..\..\src\utils\pbar.h" />
+    <ClInclude Include="..\..\src\utils\readcsv.h" />
+    <ClInclude Include="..\..\src\utils\unique_ptr.h" />
+    <ClInclude Include="..\..\src\utils\untar.h" />
+    <ClInclude Include="..\..\src\utils\Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\NBody\carrier.cc" />
+    <ClCompile Include="..\..\src\NBody\load_carr.cc" />
+    <ClCompile Include="..\..\src\NBody\nbody.cc" />
+    <ClCompile Include="..\..\src\NBody\nbody_octree.cc" />
+    <ClCompile Include="..\..\src\NBody\sim_file_io.cc" />
+    <ClCompile Include="..\..\src\NBody\sim_progress.cc" />
+    <ClCompile Include="..\..\src\NBody\visual.cc" />
+    <ClCompile Include="..\..\src\pdelay.cc" />
+    <ClCompile Include="..\..\src\physics\CTCForce.cc" />
+    <ClCompile Include="..\..\src\physics\materials.cc" />
+    <ClCompile Include="..\..\src\physics\physical_constants.cc" />
+    <ClCompile Include="..\..\src\physics\recombination.cc" />
+    <ClCompile Include="..\..\src\physics\recombination_nbody.cc" />
+    <ClCompile Include="..\..\src\physics\SimCondition.cc" />
+    <ClCompile Include="..\..\src\physics\sim_space.cc" />
+    <ClCompile Include="..\..\src\utils\datatype_hash.cc" />
+    <ClCompile Include="..\..\src\utils\decor_output.cc" />
+    <ClCompile Include="..\..\src\utils\fputils.cc" />
+    <ClCompile Include="..\..\src\utils\pbar.cc" />
+    <ClCompile Include="..\..\src\utils\readcsv.cc" />
+    <ClCompile Include="..\..\src\utils\untar.cc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
