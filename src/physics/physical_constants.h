@@ -16,7 +16,12 @@
 /* handling missing M_PI */
 #ifndef M_PI
 #include <cmath>
+#ifndef _MSC_VER
 #define M_PI 4 * std::atan(1.0)
+#else
+// --> VS requires a strict constant.
+#define M_PI 3.1415926535897932384626433832795028841971693993751058209749445923078164062
+#endif
 #endif
 
 // boost units library
@@ -34,7 +39,8 @@ using namespace boost::units::si;
 #define pm 1e-12*meter
 #define nm 1e-9*meter
 #define um 1e-6*meter
-#define mm 1e-3*meter
+/* VS Express has mm in wingdi.h to avoid the conflict, we changed mm to milm */
+#define milm 1e-3*meter
 #define cm 1e-2*meter
 #define km 1e3*meter
 #define Mm 1e6*meter

@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
 // Implementation of cpuNUM
 int PDelay::cpuNUM()
 {
-#ifdef WIN32
+#if defined(WIN32) || defined(_MSC_VER)
     SYSTEM_INFO sysinfo;
     GetSystemInfo(&sysinfo);
     return sysinfo.dwNumberOfProcessors;

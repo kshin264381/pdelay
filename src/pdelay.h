@@ -27,9 +27,9 @@
 #include "visual.h"
 #include "Utils.h"
 
-#ifdef _WIN32
+#if defined(_WIN32) || defined(_MSC_VER)
 #include <windows.h>
-#elif MACOS
+#elif defined(MACOS)
 #include <sys/param.h>
 #include <sys/sysctl.h>
 #else

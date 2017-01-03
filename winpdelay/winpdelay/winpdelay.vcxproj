@@ -133,7 +133,7 @@ del $(LocalDebuggerWorkingDirectory)\*.db $(LocalDebuggerWorkingDirectory)\*.db-
       <PrecompiledHeaderFile />
       <PrecompiledHeaderOutputFile />
       <MultiProcessorCompilation>false</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>E:\Libs\boost_1_62_0;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\utils;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\TCAD;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\octree;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\physics;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\NBody;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\BHTree;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\sqlite3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Libs\boost_1_62_0;$(SolutionDir)..\src;$(SolutionDir)..\src\utils;$(SolutionDir)..\src\TCAD;$(SolutionDir)..\src\octree;$(SolutionDir)..\src\physics;$(SolutionDir)..\src\NBody;$(SolutionDir)..\src\BHTree;$(SolutionDir)..\src\sqlite3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OpenMPSupport>true</OpenMPSupport>
       <SDLCheck>false</SDLCheck>
     </ClCompile>
