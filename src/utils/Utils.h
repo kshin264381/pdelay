@@ -15,6 +15,7 @@
 #include <algorithm>
 #include <string>
 
+
 /**
  * Some basic string manipulation tools.
  *

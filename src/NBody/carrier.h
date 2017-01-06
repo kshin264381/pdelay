@@ -162,6 +162,20 @@ public:
         return *this;
     }
 
+    // Some operators for BHTree insertion
+    Carrier& operator+ (Carrier Other)
+    {
+        if (Other != *this) {
+            this->charge += Other.GetCharge();
+            this->position = (this->position + Other.GetPos())/2.0;
+            this->velocity += Other.GetVel();
+            this->force += Other.GetForce();
+            this->mass += Other.GetMass();
+            // Just leave index system for now...
+        }
+        return *this;
+    }
+
     // Constructors and Destructors
     Carrier();
     Carrier(

@@ -301,3 +301,33 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+Makefile
+configure
+*.status
+Makefile.in
+*.stackdump
+src/.deps/
+*.o
+src/*.a
+*.a
+*.Po
+pdelay
+*.m4
+autom4te.cache/output.0
+config/ar-lib
+
+# Unix build files
+Makefile
+Makefile.in
+aclocal.m4
+autom4te.cache/
+config.*
+configure
+m4/
+stamp-h?
+.deps/
+.dirstamp
+*.o
+*~
+config/
+*.exe

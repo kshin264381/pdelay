@@ -36,7 +36,7 @@ const fp_t DOPING_CONC = 3.59e+11;
 const std::string MATERIAL = "Silicon";
 
 // Default Database File
-const std::string MAT_DB_FILE = "database/Materials.db";
+const std::string MAT_DB_FILE = "./database/Materials.db";
 
 /****************************************************************************/
 /********************* OK to change part ends here!! ************************/

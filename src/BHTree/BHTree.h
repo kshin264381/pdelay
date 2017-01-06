@@ -55,10 +55,13 @@ private:
     std::string ID;
 
 public:
-    // If other branch nodes are all null, then the Octant represents
+    // If other branch nodes are nulls, then the Octant represents
     // a single body and it is called "External."
     bool isExternal(const std::shared_ptr<BHTree>& bht);
     bool isExternal();
+
+    // Empty node?
+    bool isEmpty();
 
     // Inserting a carrier into the BHTree
     int insert(const spCarrier& carrier);

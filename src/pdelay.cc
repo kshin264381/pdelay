@@ -10,6 +10,12 @@
 
 #include "pdelay.h"
 
+#if defined(__CYGWIN__)
+#include <cstring>
+#include <climits>
+#include <cstdlib>
+#endif
+
 /**
  *
  * The main function...
@@ -144,17 +150,10 @@ void PDelay::usage(const char* exec_name)
 }
 
 
-// Get path from given path std::string
+// Get path(dir) from given file std::string
 std::string PDelay::GetPath(std::string some_file_path)
 {
-    // cull out weird or wrong file
-    std::ifstream test(some_file_path);
-    if (!test) {
-        std::cerr << "Cannot find file: " \
-            << some_file_path << std::endl;
-        return std::string({});
-    }
-
+#if !defined(__CYGWIN__)
     // Setting up slash
     fs::wpath slash("/");
     fs::wpath preferred_slash = slash.make_preferred().native();
@@ -164,11 +163,36 @@ std::string PDelay::GetPath(std::string some_file_path)
     // Preparing full path variable.
     fs::wpath full_path(fs::initial_path<fs::path>());
     full_path = fs::complete(fs::wpath(some_file_path));
+    auto full_path_str = full_path.make_preferred().string();
 
     // Check if input file string has directory path.
     std::string path_dir = \
         full_path.make_preferred().remove_filename().string();
     if (path_dir.empty()) path_dir = ".";
+
+    if (!fs::exists(fs::status(fs::wpath(path_dir)))) {
+        std::cerr << "Directory not found: " \
+            << path_dir << std::endl;
+        exit(-1);
+    }
+
+#else
+    // Cygwin Case
+    char buf[PATH_MAX+1];
+    char* full_path = realpath(some_file_path.c_str(), buf);
+    std::string full_path_str(full_path, strnlen(full_path, PATH_MAX+1));
+
+    std::string path_dir(full_path_str.substr(0, full_path_str.find_last_of("\\/")));
+
+    //    struct stat test;
+    // if ( S_ISDIR(path_dir.c_str()) ) {
+    //     std::cerr << "Cannot find directory: " \
+    //         << path_dir << std::endl;
+    //     exit(-1);
+    // }
+
+
+#endif
 
     return path_dir;
 }
@@ -181,14 +205,7 @@ std::string PDelay::GetPath(const char* some_file_path)
 // Get full file path
 std::string PDelay::GetFullPath(std::string some_file_path)
 {
-    // cull out weird or wrong file
-    std::ifstream test(some_file_path);
-    if (!test) {
-        std::cerr << "Cannot find file: " \
-            << some_file_path << std::endl;
-        return std::string({});
-    }
-
+#if !defined(__CYGWIN__)
     // Setting up slash
     fs::wpath slash("/");
     fs::wpath preferred_slash = slash.make_preferred().native();
@@ -198,8 +215,31 @@ std::string PDelay::GetFullPath(std::string some_file_path)
     // Preparing full path variable.
     fs::wpath full_path(fs::initial_path<fs::path>());
     full_path = fs::complete(fs::wpath(some_file_path));
+    auto full_path_str = full_path.make_preferred().string();
 
-    return full_path.make_preferred().string();
+    if (!fs::exists(full_path)) {
+        std::cerr << "File not found: " \
+            << full_path_str << std::endl;
+        exit(-1);
+    }
+
+#else
+    // Cygwin Case
+    char buf[PATH_MAX+1];
+    char* full_path = realpath(some_file_path.c_str(), buf);
+    std::string full_path_str(full_path, strnlen(full_path, PATH_MAX+1));
+
+    std::ifstream test(full_path);
+    if (!test) {
+        std::cerr << "File not found: " \
+            << full_path_str << std::endl;
+        exit(-1);
+    }
+
+#endif
+
+
+    return full_path_str;
 }
 std::string PDelay::GetFullPath(const char* some_file_path)
 {
@@ -529,18 +569,7 @@ bool PDelay::SetMatDBFile(const char* new_DB_file)
 }
 void PDelay::SetMatDBFilePath()
 {
-    // Setting up slash
-    fs::wpath slash("/");
-    fs::wpath preferred_slash = slash.make_preferred().native();
-    this->database_file = replace(
-        database_file, slash.string(), preferred_slash.string());
-
-    fs::wpath self_full_path = fs::complete(fs::wpath(self_path));
-
-    fs::wpath db_full_path = self_full_path / fs::wpath(database_file);
-
-    this->database_file = db_full_path.make_preferred().string();
-
+    this->database_file = this->GetFullPath(this->database_file);
 }
 bool PDelay::SetInputFile(const std::string& new_input_file)
 {

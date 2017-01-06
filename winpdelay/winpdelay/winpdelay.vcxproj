@@ -149,7 +149,7 @@ del $(LocalDebuggerWorkingDirectory)\*.db $(LocalDebuggerWorkingDirectory)\*.db-
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(TargetDir)database;
-copy /Y $(SolutionDir)Materials.db $(TargetDir)database\;
+copy /Y $(SolutionDir)Materials.db $(TargetDir)database\
 copy /Y $(SolutionDir)test.tar.bz2 $(TargetDir)
 copy /Y $(SolutionDir)test_data.dbt $(TargetDir)</Command>
     </PostBuildEvent>
