@@ -70,7 +70,7 @@ int BHTree::insert(const spCarrier& carrier)
     // 0, 1, 2, 3, 4, 5, 6, 7
 
     // At first, we need to find the last viable external node.
-    std::shared_ptr<BHTree> node_to_insert = std::make_shared<BHTree>(*this);
+    auto node_to_insert = std::make_shared<BHTree>(*this);
     auto depth = 0;
     spOctant octant_for_new_node = nullptr;
     while(node_to_insert) {
@@ -339,16 +339,27 @@ std::string BHTree::to_string() const
 void BHTree::ResetAll()
 {
     tree_carrier = nullptr;
-    this->current_octant.reset();
+    current_octant = nullptr;
 
-    this->uNE.reset();
-    this->uNW.reset();
-    this->uSE.reset();
-    this->uSW.reset();
-    this->lNE.reset();
-    this->lNW.reset();
-    this->lSE.reset();
-    this->lSW.reset();
+    uNE = nullptr;
+    uNW = nullptr;
+    uSE = nullptr;
+    uSW = nullptr;
+    lNE = nullptr;
+    lNW = nullptr;
+    lSE = nullptr;
+    lSW = nullptr;
+
+    // this->current_octant.reset();
+
+    // this->uNE.reset();
+    // this->uNW.reset();
+    // this->uSE.reset();
+    // this->uSW.reset();
+    // this->lNE.reset();
+    // this->lNW.reset();
+    // this->lSE.reset();
+    // this->lSW.reset();
 }
 
 // Assignment operators

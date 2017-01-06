@@ -10,6 +10,8 @@
  *      Author: Taylor Shin
 **/
 
+#include "unique_ptr.h"
+
 #include "Octant.h"
 
 // Check if this quadrant contains a certain carrier
@@ -133,7 +135,7 @@ int Octant::GetOctantPart(const spCarrier& carrier) const
     // Determine some_carrier's location from
     // center of this Octant.
     auto rel_loc = \
-        std::make_shared<Loc>(carrier->GetPos() - this->center);
+        std::make_unique<Loc>(carrier->GetPos() - this->center);
 
     // determining relative pos
     // --> True: positive side,

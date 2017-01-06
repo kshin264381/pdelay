@@ -10,12 +10,6 @@
 
 #include "pdelay.h"
 
-#if defined(__CYGWIN__)
-#include <cstring>
-#include <climits>
-#include <cstdlib>
-#endif
-
 /**
  *
  * The main function...
@@ -120,7 +114,7 @@ void PDelay::usage(const char* exec_name)
     options_description += \
         "            Continues calculation from latest state.\n";
     options_description += \
-        "-l <delta_t_in_sec> : Forces simulation timestep.\n";
+        "-e <delta_t_in_sec> : Forces simulation timestep.\n";
     options_description += \
         "            If not given, the simulator actively adjusts \n            delta_t based on carrier density.\n";
     options_description += \
@@ -153,17 +147,10 @@ void PDelay::usage(const char* exec_name)
 // Get path(dir) from given file std::string
 std::string PDelay::GetPath(std::string some_file_path)
 {
-#if !defined(__CYGWIN__)
+// #if !defined(__CYGWIN__)
     // Setting up slash
-    fs::wpath slash("/");
-    fs::wpath preferred_slash = slash.make_preferred().native();
-    some_file_path = replace(
-        some_file_path, slash.string(), preferred_slash.string());
-
-    // Preparing full path variable.
-    fs::wpath full_path(fs::initial_path<fs::path>());
-    full_path = fs::complete(fs::wpath(some_file_path));
-    auto full_path_str = full_path.make_preferred().string();
+    auto full_path_str = this->GetFullPath(some_file_path);
+    auto full_path = fs::wpath(full_path_str);
 
     // Check if input file string has directory path.
     std::string path_dir = \
@@ -176,23 +163,11 @@ std::string PDelay::GetPath(std::string some_file_path)
         exit(-1);
     }
 
-#else
-    // Cygwin Case
-    char buf[PATH_MAX+1];
-    char* full_path = realpath(some_file_path.c_str(), buf);
-    std::string full_path_str(full_path, strnlen(full_path, PATH_MAX+1));
-
-    std::string path_dir(full_path_str.substr(0, full_path_str.find_last_of("\\/")));
-
-    //    struct stat test;
-    // if ( S_ISDIR(path_dir.c_str()) ) {
-    //     std::cerr << "Cannot find directory: " \
-    //         << path_dir << std::endl;
-    //     exit(-1);
-    // }
+// #else
 
 
-#endif
+
+// #endif
 
     return path_dir;
 }
@@ -205,7 +180,7 @@ std::string PDelay::GetPath(const char* some_file_path)
 // Get full file path
 std::string PDelay::GetFullPath(std::string some_file_path)
 {
-#if !defined(__CYGWIN__)
+// #if !defined(__CYGWIN__)
     // Setting up slash
     fs::wpath slash("/");
     fs::wpath preferred_slash = slash.make_preferred().native();
@@ -223,20 +198,10 @@ std::string PDelay::GetFullPath(std::string some_file_path)
         exit(-1);
     }
 
-#else
-    // Cygwin Case
-    char buf[PATH_MAX+1];
-    char* full_path = realpath(some_file_path.c_str(), buf);
-    std::string full_path_str(full_path, strnlen(full_path, PATH_MAX+1));
+// #else
 
-    std::ifstream test(full_path);
-    if (!test) {
-        std::cerr << "File not found: " \
-            << full_path_str << std::endl;
-        exit(-1);
-    }
 
-#endif
+// #endif
 
 
     return full_path_str;
@@ -408,11 +373,11 @@ int PDelay::ParseOptions(int argc, char* argv[])
         ("d,database", "Material Database File", cxxopts::value<std::string>(database_file))
         ("c,continue", "Carrier information database file", cxxopts::value<std::string>(cr_file))
         ("t,temperature", "Temperature", cxxopts::value<fp_t>(temperature))
-        ("l,delta_t", "Time step", cxxopts::value<fp_t>(delta_t))
+        ("e,delta_t", "Time step", cxxopts::value<fp_t>(delta_t))
         ("a,algorithm", "N-Body calculation model", cxxopts::value<std::string>(algorithm))
         ("m,model", "N-Body simulation mode", cxxopts::value<std::string>(sim_mode))
         ("o,doping_concentration", "Doping Concentration of the sensor", cxxopts::value<fp_t>(doping_concentration))
-        ("r,carrier_log", "Generate carrier log (default True)", cxxopts::value<std::string>(c_log_str));
+        ("l,carrier_log", "Generate carrier log (default True)", cxxopts::value<std::string>(c_log_str));
 
     options.parse_positional({ "input", "procs", "positional" });
     options.parse(argc, argv);

@@ -31,7 +31,8 @@ int NBody_Octree::MakeTree()
     }
 
     // Initialize Tree
-    this->Tree.reset();
+    //this->Tree.reset();
+    this->Tree = nullptr;
     this->Tree = std::make_shared<BHTree>(FirstOctant);
 
     // Looks stupid but std::map doesn't have random access
@@ -255,17 +256,9 @@ void NBody_Octree::TreeUpdateCForce(spOctree tree, spCarrier carrier)
     auto oct_len = tree->GetOctant()->GetLength();
     auto oct_len_max = fp_max<fp_t>(oct_len.x, oct_len.y, oct_len.z);
 
-    if (tree->isExternal()) {
-        if (tree->GetCarrier() != carrier) {
-            // Update Coulomb force first...
-            auto NewCForce = this->CoulombForce(carrier, tree->GetCarrier());
-            carrier->AddForce(NewCForce);
-        }
-    }
-    else if ( (dist / oct_len_max) < this->alpha ) {
-        // Update Coulomb force...
-        auto NewCForce = this->CoulombForce(carrier, tree->GetCarrier());
-        carrier->AddForce(NewCForce);
+    if ( tree->GetCarrier() != carrier && (dist / oct_len_max) < this->alpha ) {
+        // Update Coulomb force withing alpha...
+        carrier->AddForce(this->CoulombForce(carrier, tree->GetCarrier()));
     }
 
     // Recursively... run this crap to the end...
@@ -282,8 +275,7 @@ void NBody_Octree::TreeUpdateCForce(spOctree tree, spCarrier carrier)
 // Updating Drift force.
 void NBody_Octree::TreeUpdateDForce(spCarrier carrier)
 {
-    auto NewDForce = this->DriftForce(carrier);
-    carrier->AddForce(NewDForce);
+    carrier->AddForce(this->DriftForce(carrier));
 }
 
 

@@ -77,15 +77,15 @@ elif [[ $ARG == "mingw64.debug" ]] ; then
     BOOST_ROOT="/local64/dst/boost"
     BOOST_LIBDIR="/local64/dst/boost/lib"
 elif [[ $ARG == "cygwin.debug" ]] ; then
-    ARG_CFLAGS="$DEBUG_COMPILER_FLAGS -I/usr/local/include"
-    ARG_CXXFLAGS="$DEBUG_COMPILER_FLAGS -I/usr/local/include"
+    ARG_CFLAGS="$DEBUG_COMPILER_FLAGS -I/usr/include"
+    ARG_CXXFLAGS="$DEBUG_COMPILER_FLAGS -I/usr/include"
     M4FOLDER=m4.2.69
-    BOOST_LIBDIR="/usr/local/lib"
+    BOOST_LIBDIR="/usr/lib"
 elif [[ $ARG == "cygwin.release" ]] ; then
-    ARG_CFLAGS="$RELEASE_COMPILER_FLAGS -I/usr/local/include"
-    ARG_CXXFLAGS="$RELEASE_COMPILER_FLAGS -I/usr/local/include"
+    ARG_CFLAGS="$RELEASE_COMPILER_FLAGS -I/usr/include"
+    ARG_CXXFLAGS="$RELEASE_COMPILER_FLAGS -I/usr/include"
     M4FOLDER=m4.2.69
-    BOOST_LIBDIR="/usr/local/lib"
+    BOOST_LIBDIR="/usr/lib"
 elif [[ $ARG == "release" ]] ; then
     ARG_LDFLAGS="${MKLLIB}"
     ARG_CFLAGS="$RELEASE_COMPILER_FLAGS ${MKLCFLAGS}"
