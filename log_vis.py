@@ -104,9 +104,11 @@ def main():
         carr_cnt_hole.append(hole_cnt)
         carr_cnt_elec.append(elec_cnt)
 
+
+    barwidth = (max(time_list)-min(time_list))/len(time_list)*0.9
     plt.figure()
-    plt.plot(time_list, carr_cnt_hole, 'b--', linewidth=2, label='Holes')
-    plt.plot(time_list, carr_cnt_elec, 'r--', linewidth=2, label='Electrons')
+    plt.plot(time_list, carr_cnt_hole, 'bo', label='Holes')
+    plt.plot(time_list, carr_cnt_elec, 'ro', label='Electrons')
     plt.xlabel('time (s)')
     plt.title('Carrier collection histogram from ... %s' % logfile)
     plt.grid(True)
