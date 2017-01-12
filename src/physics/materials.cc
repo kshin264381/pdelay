@@ -34,6 +34,18 @@ fp_t MatData::SiEffMassP()
         1.48e-6 * this->lattice_temp * this->lattice_temp;
 }
 
+// Diffusion coefficients (Boltzmann) (cm^2/s)
+fp_t MatData::SiDiffCoeffN()
+{
+    return k_B * this->lattice_temp * \
+        this->Semiconductor["Silicon"]["MUN"] / q_h;
+}
+fp_t MatData::SiDiffCoeffP()
+{
+    return k_B * this->lattice_temp * \
+        this->Semiconductor["Silicon"]["MUP"] / q_h;
+}
+
 // Clearing this->TempMatList
 int MatData::ClearTempMatList()
 {

@@ -15,7 +15,6 @@
 
 /**
  * EffMass class implementations
- * --> Returns effective mass
 **/
 fp_t EffMass::Electron()
 {
@@ -25,4 +24,20 @@ fp_t EffMass::Hole()
 {
     return this->MaterialDatabase.GetSemi("Silicon", "MVTHP")*m_elec;
 }
+
+
+/**
+ * DiffCoeff class implementations
+**/
+fp_t DiffCoeff::Electron()
+{
+	return k_B * this->MaterialDatabase.GetTemp() * \
+        this->MaterialDatabase.GetSemi("Silicon", "MUN") / q_h;
+}
+fp_t DiffCoeff::Hole()
+{
+	return k_B * this->MaterialDatabase.GetTemp() * \
+        this->MaterialDatabase.GetSemi("Silicon", "MUP") / q_h;
+}
+
 

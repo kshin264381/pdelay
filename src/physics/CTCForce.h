@@ -35,6 +35,10 @@ public:
     // Calculate Debye length for a carrier
     fp_t DebyeLength(const spCarrier& carrier);
 
+    // Diffuse a Carrier by given tau
+    void Diffusion(const spCarrier& carrier);
+    void Diffusion(const spCarrier& carrier, const fp_t& tau);
+
     // Calculate Brownian scattering for a carrier
     void MFPAdj(spCarrier& carrier);
     void MFPAdj(spCarrier& carrier, const fp_t& tau);

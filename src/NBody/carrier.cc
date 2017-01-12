@@ -121,6 +121,12 @@ std::string Carrier::GetForceStr() const
 
 }
 
+short Carrier::GetTypeI()
+{
+    if (fp_lt(this->charge, FP_T(0.0))) return CARR_T_ELECTRON;
+    else if (fp_mt(this->charge, FP_T(0.0))) return CARR_T_HOLE;
+    else return 100;
+}
 
 //
 // Force calculation methods

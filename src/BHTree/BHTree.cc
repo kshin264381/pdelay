@@ -164,69 +164,6 @@ int BHTree::insert(const spCarrier& carrier)
             break;
     }
 
-    //
-    // Old, stack overflow prone code
-    //
-    // Now, pass given carrier to subsequent tree.
-    // switch (carrier_loc) {
-    // case 0:
-    //     if (this->uNE == nullptr) {
-    //         this->uNE = std::make_shared<BHTree>(
-    //             this->current_octant->uNE(), this->depth + 1, carrier_loc);
-    //     }
-    //     this->uNE->insert(carrier);
-    //     break;
-    // case 1:
-    //     if (this->uNW == nullptr) {
-    //         this->uNW = std::make_shared<BHTree>(
-    //             this->current_octant->uNW(), this->depth + 1, carrier_loc);
-    //     }
-    //     this->uNW->insert(carrier);
-    //     break;
-    // case 2:
-    //     if (this->uSE == nullptr) {
-    //         this->uSE = std::make_shared<BHTree>(
-    //             this->current_octant->uSE(), this->depth + 1, carrier_loc);
-    //     }
-    //     this->uSE->insert(carrier);
-    //     break;
-    // case 3:
-    //     if (this->uSW == nullptr) {
-    //         this->uSW = std::make_shared<BHTree>(
-    //             this->current_octant->uSW(), this->depth + 1, carrier_loc);
-    //     }
-    //     this->uSW->insert(carrier);
-    //     break;
-    // case 4:
-    //     if (this->lNE == nullptr) {
-    //         this->lNE = std::make_shared<BHTree>(
-    //             this->current_octant->lNE(), this->depth + 1, carrier_loc);
-    //     }
-    //     this->lNE->insert(carrier);
-    //     break;
-    // case 5:
-    //     if (this->lNW == nullptr) {
-    //         this->lNW = std::make_shared<BHTree>(
-    //             this->current_octant->lNW(), this->depth + 1, carrier_loc);
-    //     }
-    //     this->lNW->insert(carrier);
-    //     break;
-    // case 6:
-    //     if (this->lSE == nullptr) {
-    //         this->lSE = std::make_shared<BHTree>(
-    //             this->current_octant->lSE(), this->depth + 1, carrier_loc);
-    //     }
-    //     this->lSE->insert(carrier);
-    //     break;
-    // case 7:
-    //     if (this->lSW == nullptr) {
-    //         this->lSW = std::make_shared<BHTree>(
-    //             this->current_octant->lSW(), this->depth + 1, carrier_loc);
-    //     }
-    //     this->lSW->insert(carrier);
-    //     break;
-    // } /* switch (carrier_loc) */
-
     return 0;
 }
 // direct insertion version

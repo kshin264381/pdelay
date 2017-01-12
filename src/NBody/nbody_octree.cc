@@ -297,6 +297,8 @@ void NBody_Octree::update_carr_position(spCarrier& carrier)
     carrier->UpdatePos(this->delta_t);
     // Update positions with mean free path estimation.
     this->MFPAdj(carrier);
+    // Apply diffusion
+    this->Diffusion(carrier, this->delta_t);
     // New position...
     Loc new_pos = carrier->GetPos();
 

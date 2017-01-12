@@ -152,4 +152,39 @@ public:
     virtual ~EffMass() {;}
 };
 
+// Returns Diffusion Coefficient... (Well, we love classes)
+//
+class DiffCoeff {
+private:
+    Materials::MatData MaterialDatabase;
+    std::string MaterialName;
+
+public:
+    fp_t Electron();
+    fp_t Hole();
+
+    // Setting up material name
+    void SetMaterial(std::string MatName)
+    { this->MaterialName = MatName; }
+
+    // Constructors and Destructors
+    DiffCoeff() : MaterialName("Silicon")
+    { this->MaterialDatabase = Materials::MatData(); }
+    DiffCoeff(fp_t LatTemp) : MaterialName("Silicon")
+    { this->MaterialDatabase = Materials::MatData(LatTemp); }
+    DiffCoeff(std::string MatName, fp_t LatTemp) : DiffCoeff(LatTemp)
+    { this->MaterialName = MatName; }
+    DiffCoeff(const char* mat_data_filename)
+    {
+        this->MaterialDatabase = \
+            Materials::MatData(mat_data_filename);
+        // Setting up default material to silicon anyway
+        this->MaterialName = "Silicon";
+    }
+    virtual ~DiffCoeff() {;}
+};
+
+
+
+
 #endif /* Include guard */

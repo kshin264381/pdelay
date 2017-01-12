@@ -28,6 +28,10 @@
 cfp_t rand_delta_min = 1e-6;
 cfp_t rand_delta_max = 1e-5;
 
+// Some definitions
+constexpr short CARR_T_HOLE = 1;
+constexpr short CARR_T_ELECTRON = 0;
+
 /**
  * Carrier (class)
  * 
@@ -116,6 +120,7 @@ public:
     uint64_t GetIndex() const { return this->index; }
     std::string GetID() const { return this->CarrID; }
     std::string GetType() const { return this->CarrType; }
+    short GetTypeI();
 
     // Add Force
     void AddForce(const Force& ext_force)

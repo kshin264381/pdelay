@@ -50,6 +50,11 @@ private:
     fp_t SiEffMassN(); // electron
     fp_t SiEffMassP(); // hole
 
+    // Another Quick and dirty method to get
+    // Silicon Diffusion coefficient
+    fp_t SiDiffCoeffN();
+    fp_t SiDiffCoeffP();
+
     // Clearing this->TempMatList
     int ClearTempMatList();
 
@@ -77,7 +82,8 @@ public:
     { return Metal[MatName][ParName]; }
 
     // Setup Temperature
-    void SetTemp(fp_t new_temperature);
+    void SetTemp(fp_t new_temperature); // Also defines effective mass
+    fp_t GetTemp() const { return lattice_temp; }
 
     // The actual callback function
     int Callback(int argc, char** argv, char** azColName);

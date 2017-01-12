@@ -11,6 +11,7 @@
 **/
 
 #include "CTCForce.h"
+#include "Utils.h"
 
 using namespace Physics;
 
@@ -33,15 +34,7 @@ Vel CTCForce::thermal_vel(const spCarrier& carrier)
         v_therm(this->temperature, carrier->GetMass());
 
     // Implementing it into a random 3D vector.
-    fp_t phi = fp_randn(2.0) * static_cast<fp_t>(M_PI);
-    fp_t costheta = uniform_rand(-1.0, 1.0);
-    fp_t theta = acos(costheta);
-    Vel output_Vel = \
-        Vel{
-            sin(theta)*cos(phi),
-            sin(theta)*sin(phi),
-            cos(theta)
-        } * vel_therm;
+    Vel output_Vel = UnitVec3D<fp_t>() * vel_therm;
     // note that the return value is in the unit of (m/s)
     return output_Vel;
 }
@@ -67,6 +60,30 @@ fp_t CTCForce::DebyeLength(const spCarrier& carrier)
         sqrt(this->DetMaterial.GetSemi("Silicon", "EPS")*eps_0*Vt / \
         fabs( carrier->GetCharge()* \
             ( this->doping * pow(100.0, 3.0) ) ) ) );
+}
+
+// Applies diffusion on a carrier
+void CTCForce::Diffusion(const spCarrier& carrier)
+{
+    this->Diffusion(carrier, this->delta_t);
+}
+void CTCForce::Diffusion(const spCarrier& carrier, const fp_t& tau)
+{
+    auto Mu = FP_T(0.0);
+
+    if (carrier->GetTypeI() == CARR_T_HOLE)
+        Mu = this->DetMaterial.GetSemi("Silicon", "MUP");
+    else if (carrier->GetTypeI() == CARR_T_ELECTRON)
+        Mu = this->DetMaterial.GetSemi("Silicon", "MUN");
+
+    auto Dt = k_B*this->temperature*Mu/q_h;
+    auto DiffLen = (sqrt(Dt*tau) / FP_T(100.0)) * this->len_scale_f; // Matching to CGS with / FP_T(100)
+
+    auto DiffusedPos = UnitVec3D<fp_t>() * DiffLen;
+
+    carrier->AdjPosDelta(DiffusedPos);
+
+    return;
 }
 
 // Adjust position of a carrier from Brownian motion.

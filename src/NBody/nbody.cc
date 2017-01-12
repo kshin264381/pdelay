@@ -199,6 +199,8 @@ void NBody::update_carr_position(spCarrier& carrier, const fp_t& tau)
     carrier->UpdatePos(tau);
     // Update positions with mean free path estimation.
     this->MFPAdj(carrier, tau);
+    // Apply diffusion
+    this->Diffusion(carrier, tau);
     // New position...
     Loc new_pos = carrier->GetPos();
 
