@@ -52,7 +52,7 @@
 			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
 			"name": "Anaconda Python Builder",
 			"selector": "source.python",
-			"shell_cmd": "\"C:\\WinPython\\python-3.5.1.amd64\\python.exe\" -u \"$file\""
+			"shell_cmd": "\"python\" -u \"$file\""
 		}
 	],
 	"folders":
