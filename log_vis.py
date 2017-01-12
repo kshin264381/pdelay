@@ -64,6 +64,12 @@ def main():
     data_store = {}
     with open(logfile, 'r') as fp:
         logfile_lines = fp.readlines()
+
+        # Check if the input logfile is valid
+        if len(logfile_lines) < 1:
+            raise ValueError('Empty file!!')
+            sys.exit(1)
+
         for ll in logfile_lines:
             # read in time
             time_matched = re.search(r"\[[+-]?\d+(?:\.\d+)?\s[a-z]+\]", ll)

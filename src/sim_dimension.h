@@ -26,7 +26,7 @@ const fp_t Z_START = 0.0;
 const fp_t Z_END = 500;
 
 // Bias (in V)
-const fp_t BIAS_ANODE = -900;     // Bulk electrode side: photons impinge here...
+const fp_t BIAS_ANODE = -200;     // Bulk electrode side: photons impinge here...
 const fp_t BIAS_CATHODE = -1;     // Pixel electrode side
 
 // Doping concentration
