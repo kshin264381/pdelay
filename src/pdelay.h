@@ -70,6 +70,8 @@ private:
     quantity<length> def_unit; // Default unit of input dimension.
     std::string c_log_str;     // Carrier log generation setting receiver.
     bool c_log;                // Generate carrier log.
+    std::string bias_str;      // Bias input string
+    std::string dimension_str; // Dimension string
 
     enum sim_modes { onetoone, octree }; // Supported simulation modes.
     enum algorithm_modes { oneshot, skdk, sdkd }; // Supported algorithms.
@@ -113,21 +115,6 @@ private:
     //
     cxxopts::Options options;
     int ParseOptions(int argc, char* argv[]); // Parses input from main()
-
-    // Another small string manipulation utility to replace certain letters.
-    std::string replace(
-        const std::string& original_str,
-        const std::string& c_tobe_r,
-        const std::string& c_to_r)
-    {
-        std::string new_string = original_str;
-        char c_r = c_tobe_r[0];
-        char c_o = c_to_r[0];
-        std::replace(new_string.begin(), new_string.end(), c_r, c_o);
-        return new_string;
-    }
-
- 
 
 public:
     // Utility methods
@@ -210,6 +197,8 @@ public:
         input_file({}),
         cr_file({}),
         c_log(true),
+        bias_str({}),
+        dimension_str({}),
         database_file(MAT_DB_FILE),
         vis_mode(NBV_OMODE_SQLITE3),
         force_delta_t(false),

@@ -377,7 +377,9 @@ int PDelay::ParseOptions(int argc, char* argv[])
         ("a,algorithm", "N-Body calculation model", cxxopts::value<std::string>(algorithm))
         ("m,model", "N-Body simulation mode", cxxopts::value<std::string>(sim_mode))
         ("o,doping_concentration", "Doping Concentration of the sensor", cxxopts::value<fp_t>(doping_concentration))
-        ("l,carrier_log", "Generate carrier log (default True)", cxxopts::value<std::string>(c_log_str));
+        ("l,carrier_log", "Generate carrier log (default True)", cxxopts::value<std::string>(c_log_str))
+        ("b,bias", "Setting up bias <bias_between_electrode> or <anode>:<cathode>", cxxopts::value<std::string>(bias_str))
+        ("n,dimension", "Setting up dimension x<x_start>:<x_end>y<y_start>:<y_end>z<z_start>:<z_end>", cxxopts::value<std::string>(dimension_str));
 
     options.parse_positional({ "input", "procs", "positional" });
     options.parse(argc, argv);
@@ -421,6 +423,43 @@ int PDelay::ParseOptions(int argc, char* argv[])
     // Set up c_log
     if (str_to_lower(c_log_str) == "false")
         this->c_log = false;
+
+    // Set up bias
+    if (!bias_str.empty()) {
+        auto found_colon = bias_str.find_first_of(":");
+        fp_t anode_bias, cathode_bias;
+        if (found_colon) {
+            auto str_anode = bias_str.substr(0, found_colon-1);
+            auto str_cathode = bias_str.substr(found_colon+1);
+            anode_bias = str_to_num<fp_t>(str_anode);
+            cathode_bias = str_to_num<fp_t>(str_cathode);
+        }
+        else {
+            anode_bias = str_to_num<fp_t>(bias_str);
+            cathode_bias = FP_T(0.0);
+        }
+        this->SetBias(anode_bias, cathode_bias);
+    }
+
+    // Set up dimension
+    if (!dimension_str.empty()) {
+        auto x_ind = dimension_str.find_first_of("x");
+        auto y_ind = dimension_str.find_first_of("y");
+        auto z_ind = dimension_str.find_first_of("z");
+        auto x_portion = dimension_str.substr(x_ind+1, y_ind-1);
+        auto y_portion = dimension_str.substr(y_ind+1, z_ind-1);
+        auto z_portion = dimension_str.substr(z_ind+1);
+        auto x_colon = x_portion.find_first_of(":");
+        auto y_colon = y_portion.find_first_of(":");
+        auto z_colon = z_portion.find_first_of(":");
+        auto x_start = str_to_num<fp_t>(x_portion.substr(0, x_colon-1));
+        auto x_end = str_to_num<fp_t>(x_portion.substr(x_colon+1));
+        auto y_start = str_to_num<fp_t>(y_portion.substr(0, y_colon-1));
+        auto y_end = str_to_num<fp_t>(y_portion.substr(y_colon+1));
+        auto z_start = str_to_num<fp_t>(z_portion.substr(0, z_colon-1));
+        auto z_end = str_to_num<fp_t>(z_portion.substr(z_colon+1));
+        this->SetDimension(x_start, x_end, y_start, y_end, z_start, z_end);
+    }
 
     return 0;
 }

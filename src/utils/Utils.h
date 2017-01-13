@@ -14,6 +14,7 @@
 
 #include <algorithm>
 #include <string>
+#include <sstream>
 
 #include <fputils.h>
 
@@ -37,6 +38,35 @@ static std::string str_to_upper(const std::string& str)
     return STR;
 }
 
+// Another small string manipulation utility to replace certain letters.
+static std::string replace(
+    const std::string& original_str,
+    const std::string& c_tobe_r,
+    const std::string& c_to_r)
+{
+    std::string new_string = original_str;
+    char c_r = c_tobe_r[0];
+    char c_o = c_to_r[0];
+    std::replace(new_string.begin(), new_string.end(), c_r, c_o);
+    return new_string;
+}
+
+// Quick string to fp_t conversion tool
+//
+template <typename T>
+static T str_to_num(const std::string& input_str)
+{
+    T val;
+    std::stringstream stream(input_str);
+    stream >> val;
+    if (stream.fail()) {
+        std::runtime_error e(input_str);
+        throw e;
+    }
+    return val;
+}
+
+
 /**
  *
  * Generates a random 2D and 3D vector
@@ -44,14 +74,14 @@ static std::string str_to_upper(const std::string& str)
  *
 **/
 template <typename T>
-__tuple__<T> UnitVec2D()
+static __tuple__<T> UnitVec2D()
 {
 	T rad = uniform_rand<T>(T(-1.0), T(1.0));
 	return __tuple__<T>{ sin(rad), cos(rad) };
 }
 
 template <typename T>
-__tuple_3D__<T> UnitVec3D()
+static __tuple_3D__<T> UnitVec3D()
 {
 	T costheta = uniform_rand<T>(T(-1.0), T(1.0));
 	T phi = T(2.0) * static_cast<T>(M_PI);
