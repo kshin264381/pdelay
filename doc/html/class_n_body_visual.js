@@ -7,6 +7,7 @@ var class_n_body_visual =
     [ "SetOutputMode", "class_n_body_visual.html#a333fbac177fcd6c6dc968a681b0bbf53", null ],
     [ "sql_callback", "class_n_body_visual.html#a5b96020540751ca099ba02d9ef7de064", null ],
     [ "WriteCarriers", "class_n_body_visual.html#acba16f3af3ac95ee40057c7987f1d8c3", null ],
-    [ "WriteCarriers_sub", "class_n_body_visual.html#a04484bdcb48e01a04abf498c03f6c9c5", null ],
+    [ "WriteCarriers", "class_n_body_visual.html#a8b09f3b36366b924783fb0fb913a5b6a", null ],
+    [ "WriteCarriers_sub", "class_n_body_visual.html#a01ea21286a229d253643e812434faf92", null ],
     [ "WriteCarriersInit", "class_n_body_visual.html#aa7f255a8327a234454cf0f307472dcc9", null ]
 ];

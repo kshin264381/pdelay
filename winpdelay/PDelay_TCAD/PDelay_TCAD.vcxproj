@@ -95,14 +95,14 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\src\TCAD\solver;$(SolutionDir)..\src\TCAD\mesh;$(SolutionDir)..\src\TCAD\mathlib;$(SolutionDir)..\src\TCAD\;$(SolutionDir)..\src\utils;E:\Libs\boost_1_61_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\src\TCAD\solver;$(SolutionDir)..\src\TCAD\mesh;$(SolutionDir)..\src\TCAD\mathlib;$(SolutionDir)..\src\TCAD\;$(SolutionDir)..\src\utils;E:\Libs\boost_1_62_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>E:\Libs\boost_1_61_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\Libs\boost_1_62_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

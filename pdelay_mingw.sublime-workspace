@@ -3,35 +3,16 @@
 	{
 		"selected_items":
 		[
+			[
+				"Adj",
+				"AdjPosDelta"
+			],
+			[
+				"Ma",
+				"MaterialDatabase"
+			]
 		]
 	},
-	"buffers":
-	[
-		{
-			"file": "src/NBody/nbody.cc",
-			"settings":
-			{
-				"buffer_size": 38511,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/NBody/nbody.h",
-			"settings":
-			{
-				"buffer_size": 9614,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/NBody/typedefs.h",
-			"settings":
-			{
-				"buffer_size": 406,
-				"line_ending": "Unix"
-			}
-		}
-	],
 	"build_system": "Packages/Python/Python.sublime-build",
 	"build_system_choices":
 	[
@@ -59,7 +40,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 386.0,
+		"height": 392.0,
 		"last_filter": "Package Control: ",
 		"selected_items":
 		[
@@ -76,7 +57,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 400.0
+		"width": 416.0
 	},
 	"console":
 	{
@@ -96,14 +77,25 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/D/workshop/MonteCarlo/geant4/silicon_xray/pdelay",
-		"/D/workshop/MonteCarlo/geant4/silicon_xray/pdelay/src",
-		"/D/workshop/MonteCarlo/geant4/silicon_xray/pdelay/src/NBody"
-	],
 	"file_history":
 	[
+		"/C/Users/kshin.SHINLT/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/src/pdelay.h",
+		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/pdelay_mingw.sublime-project",
+		"/C/Users/kshin.SHINLT/AppData/Roaming/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/vel_est.py",
+		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/src/physics/SimCondition.cc",
+		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/src/physics/materials.cc",
+		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/src/physics/materials.h",
+		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/src/physics/physical_constants.h",
+		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/src/physics/physical_constants.cc",
+		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/src/BHTree/Octant.cc",
+		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/src/BHTree/BHTree.h",
+		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/src/BHTree/BHTree.cc",
+		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/src/BHTree/Octant.h",
+		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/src/NBody/typedefs.h",
+		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/src/NBody/nbody.h",
+		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/src/NBody/nbody.cc",
 		"/E/To Keithley 4200/pyview_example.py",
 		"/D/workshop/MonteCarlo/geant4/silicon_xray/pdelay/pdelay_mingw.sublime-project",
 		"/D/workshop/PyTCADTools/DetectorModelMaker/src/parameters.json",
@@ -214,20 +206,7 @@
 		"/D/crosslig/apsys_examples/solar_cell/Si_simple/solar.sol",
 		"/C/Users/kshin/Box Sync/FASPAX_Simulations/Crosslight Test/agpid_test.msh",
 		"/C/Users/kshin/Box Sync/FASPAX_Measurements/June15th2015_Fermi_Visit/Test4-140V-finescan-8gr100um-smallimplants.txt",
-		"/C/Users/kshin/Box Sync/Basics/Attenuation/Attenuation.py",
-		"/C/Users/kshin/Box Sync/Basics/Attenuation/Attenuation_Si.py",
-		"/C/Users/kshin/Box Sync/FASPAX_Measurements/June15th2015_Fermi_Visit/Test3-130V-8gr100um-smallimplants.txt",
-		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/WinPython/python-3.4.3/lib/site-packages/matplotlib/pyplot.py",
-		"/C/WinPython/python-3.4.3/lib/site-packages/matplotlib/axes/_base.py",
-		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/User/Pathway.py",
-		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/SublimePythonIDE/SublimePython.sublime-settings",
-		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
-		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/User/Python.sublime-settings",
-		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/User/SublimePython.sublime-settings",
-		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/User/Python Django.sublime-settings",
-		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-build",
-		"/C/Users/kshin/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings"
+		"/C/Users/kshin/Box Sync/Basics/Attenuation/Attenuation.py"
 	],
 	"find":
 	{
@@ -245,6 +224,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"EffMass",
 			"eval",
 			"re",
 			"math",
@@ -254,11 +234,12 @@
 			"print"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"DiffCoeff"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -266,112 +247,6 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"groups":
-	[
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "src/NBody/nbody.cc",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 38511,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/C++11/C++11.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 1,
-					"file": "src/NBody/nbody.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9614,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1116.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/NBody/typedefs.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 406,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								273,
-								273
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/C++/C++.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
-			]
-		}
-	],
 	"incremental_find":
 	{
 		"height": 25.0
@@ -400,7 +275,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.539203084833,
 			1.0
 		],
 		"rows":
@@ -423,10 +298,9 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "Anaconda Python Builder",
-	"project": "pdelay_mingw.sublime-project",
 	"replace":
 	{
-		"height": 46.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -456,7 +330,6 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
 	"settings":
 	{
 	},

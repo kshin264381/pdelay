@@ -12,5 +12,6 @@ var dir_313caf1132e152dd9b58bea13a4052ca =
     [ "readcsv.h", "readcsv_8h_source.html", null ],
     [ "unique_ptr.h", "unique__ptr_8h_source.html", null ],
     [ "untar.cc", "untar_8cc_source.html", null ],
-    [ "untar.h", "untar_8h_source.html", null ]
+    [ "untar.h", "untar_8h_source.html", null ],
+    [ "Utils.h", "_utils_8h_source.html", null ]
 ];

@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['select',['Select',['../class_n_body.html#a83a4284cb51a35bae2d1b7396f4c923a',1,'NBody']]],
-  ['setalgorithm',['SetAlgorithm',['../class_p_delay.html#ad41e78eb75c4dcc408d3d1e1cffc8bb5',1,'PDelay']]],
-  ['setnormfactor',['SetNormFactor',['../classsim__space.html#acb9eafb57ee91a02f785c454cc3b8574',1,'sim_space']]],
-  ['setoutputmode',['SetOutputMode',['../class_n_body_visual.html#a333fbac177fcd6c6dc968a681b0bbf53',1,'NBodyVisual']]],
-  ['settype',['setType',['../class_carrier.html#a62fa0b67edcc4cd3ece4d972b7987fa9',1,'Carrier']]],
-  ['size',['Size',['../classt__matrix.html#a08a433a6444ba2291a062877f359b113',1,'t_matrix']]]
+  ['reportstatus',['ReportStatus',['../class_p_delay.html#a32cfb7b371f9df723a8e396c458634e7',1,'PDelay']]],
+  ['run',['Run',['../class_n_body.html#ab207974327a9ebe9838d2f25abf87ed4',1,'NBody::Run()'],['../class_n_body___octree.html#ac5ebe895f5b991d8da16b1ecd1d2937b',1,'NBody_Octree::Run()']]]
 ];

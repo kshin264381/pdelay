@@ -1,3 +1,5 @@
 <map id="SimProgress::print_elapsed_time" name="SimProgress::print_elapsed_time">
-<area shape="rect" id="node2" href="$class_n_body.html#ab9601e59b367d72c91c3af2ce70612ab" title="NBody::update_force" alt="" coords="184,13,327,39"/>
+<area shape="rect" id="node2" href="$class_n_body.html#ab9601e59b367d72c91c3af2ce70612ab" title="NBody::update_force" alt="" coords="226,5,369,32"/>
+<area shape="rect" id="node3" href="$class_n_body___octree.html#ab181e13dd13ef840303c7f15811349f4" title="NBody_Octree::SimFinishMessage" alt="" coords="184,56,411,83"/>
+<area shape="rect" id="node4" href="$class_n_body___octree.html#ac5ebe895f5b991d8da16b1ecd1d2937b" title="NBody_Octree::Run" alt="" coords="459,56,597,83"/>
 </map>

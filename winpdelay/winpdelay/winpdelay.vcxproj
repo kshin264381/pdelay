@@ -76,7 +76,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\utils;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\TCAD;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\physics;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\NBody;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\winpdelay\sqlite3;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src;E:\FASPAX_PROJECT_WORKSHOP\MonteCarlo\geant4\silicon_xray\pdelay\src\octree;E:\Libs\boost_1_62_0;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)..\src\utils;$(SolutionDir)..\src\TCAD;$(SolutionDir)..\physics;$(SolutionDir)..\NBody;$(SolutionDir)..\winpdelay\sqlite3;$(SolutionDir)..\src;$(SolutionDir)..\octree;E:\Libs\boost_1_62_0;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>

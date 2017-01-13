@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['kick',['Kick',['../class_n_body___octree.html#a1c1f877016e39b7097ba15c9c949a207',1,'NBody_Octree']]]
+  ['initsilicon',['InitSilicon',['../class_materials_1_1_mat_data.html#a7f2bdd3b02d7d9c58f35eadc49741846',1,'Materials::MatData']]],
+  ['isexternal',['isExternal',['../class_b_h_tree.html#a930d7fe125389d3fa9afa929b3e799d6',1,'BHTree']]]
 ];

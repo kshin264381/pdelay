@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_t_vector.html" title="TVector\&lt; T, N \&gt;" alt="" coords="5,5,120,32"/>
+<area shape="rect" id="node1" href="$class_t_array.html" title="TArray\&lt; T, 2 \&gt;" alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node2" href="$class_t_array2_d.html" title="TArray2D\&lt; T \&gt;" alt="" coords="160,5,267,32"/>
 </map>

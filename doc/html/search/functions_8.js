@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['nbodyvisual',['NBodyVisual',['../class_n_body_visual.html#a7ad5c4cf9e596447f27b3965c0943b17',1,'NBodyVisual']]],
-  ['node',['Node',['../classpd_t_c_a_d_1_1_node_3_01_f_d_a_t_a_00_01_i_n_d_e_x_01_4.html#ac6a59b71328915a8c5e1a67ec8e6f28d',1,'pdTCAD::Node&lt; FDATA, INDEX &gt;']]]
+  ['matdata',['MatData',['../class_materials_1_1_mat_data.html#a8a8d37d424e5d6237f5306b8be475578',1,'Materials::MatData']]],
+  ['mesh',['Mesh',['../classpd_t_c_a_d_1_1_mesh.html#a2af137f1571af89172b9c102302c416b',1,'pdTCAD::Mesh']]]
 ];

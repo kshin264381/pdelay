@@ -8,6 +8,7 @@ var class_materials_1_1_mat_data =
     [ "GetInsul", "class_materials_1_1_mat_data.html#a889b23a4dd02c673a498af2ab95944f4", null ],
     [ "GetMetal", "class_materials_1_1_mat_data.html#ae95c1f166bd93c0cd1c42482afacc3ed", null ],
     [ "GetSemi", "class_materials_1_1_mat_data.html#aace79acb7a9f602641331443e2ebf4ad", null ],
+    [ "GetTemp", "class_materials_1_1_mat_data.html#ab20fa13f741682e87116e4cc2cdc27f4", null ],
     [ "InitMetal", "class_materials_1_1_mat_data.html#af5e05f74435d401e16b3a2737154fc91", null ],
     [ "InitSi3N4", "class_materials_1_1_mat_data.html#a4d55da1c29ef310a0776e1ae6c73014d", null ],
     [ "InitSilicon", "class_materials_1_1_mat_data.html#a7f2bdd3b02d7d9c58f35eadc49741846", null ],

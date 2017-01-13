@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loadcarrdb',['LoadCarrDB',['../class_load_carr_d_b.html#a3d838fd5ebf1f22ed4068928349a0415',1,'LoadCarrDB']]]
+  ['kick_5fsub',['kick_sub',['../class_n_body___octree.html#a65ff74968ab4ce08f94953007fbe9d36',1,'NBody_Octree']]]
 ];

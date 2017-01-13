@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['run',['Run',['../class_n_body.html#ab207974327a9ebe9838d2f25abf87ed4',1,'NBody::Run()'],['../class_n_body___octree.html#ac5ebe895f5b991d8da16b1ecd1d2937b',1,'NBody_Octree::Run()']]]
+  ['pdelay',['PDelay',['../class_p_delay.html#a044e1c8572ee9949c7081501e49b10ca',1,'PDelay']]],
+  ['print_5felapsed_5ftime',['print_elapsed_time',['../class_sim_progress.html#a702f4a01d7ae83e0d3faec360c0db1e9',1,'SimProgress']]]
 ];

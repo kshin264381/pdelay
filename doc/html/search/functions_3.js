@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['get',['get',['../class_read_data.html#a722b02373c57489d673746aa41e43db9',1,'ReadData']]],
-  ['getlocation',['GetLocation',['../classpd_t_c_a_d_1_1_node_3_01_f_d_a_t_a_00_01_i_n_d_e_x_01_4.html#a3f9ff06ac565d32279a8d10c5db61ba4',1,'pdTCAD::Node&lt; FDATA, INDEX &gt;']]]
+  ['electron',['Electron',['../class_eff_mass.html#a7292c2f884ccb812472cd9672bef5197',1,'EffMass::Electron()'],['../class_diff_coeff.html#a9a8ef9298c477ca485ec904e8a7060d9',1,'DiffCoeff::Electron()']]]
 ];

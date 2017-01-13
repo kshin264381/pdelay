@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['t_5fmatrix',['t_matrix',['../classt__matrix.html#a9e0748479f9ede478094f606c34d783c',1,'t_matrix']]],
-  ['tarray',['TArray',['../class_t_array.html#abc9988c0a73e86c41ba1e12b00054874',1,'TArray']]],
-  ['tarray2d',['TArray2D',['../class_t_array2_d.html#a5328f64d2dcc8fc754f03c2d5f3f2609',1,'TArray2D']]],
-  ['tcad',['TCAD',['../classpd_t_c_a_d_1_1_t_c_a_d.html#a9e6201cc1281486d1e8ecb3fff99731d',1,'pdTCAD::TCAD']]],
-  ['tvector',['TVector',['../class_t_vector.html#a5978b533cbfd3d7fcfc6d167066969b6',1,'TVector']]]
+  ['select',['Select',['../class_n_body.html#a83a4284cb51a35bae2d1b7396f4c923a',1,'NBody']]],
+  ['setalgorithm',['SetAlgorithm',['../class_p_delay.html#ad41e78eb75c4dcc408d3d1e1cffc8bb5',1,'PDelay']]],
+  ['setnormfactor',['SetNormFactor',['../classsim__space.html#acb9eafb57ee91a02f785c454cc3b8574',1,'sim_space']]],
+  ['setoutputmode',['SetOutputMode',['../class_n_body_visual.html#a333fbac177fcd6c6dc968a681b0bbf53',1,'NBodyVisual']]],
+  ['settype',['setType',['../class_carrier.html#a62fa0b67edcc4cd3ece4d972b7987fa9',1,'Carrier']]],
+  ['simfinishmessage',['SimFinishMessage',['../class_n_body___octree.html#ab181e13dd13ef840303c7f15811349f4',1,'NBody_Octree']]]
 ];

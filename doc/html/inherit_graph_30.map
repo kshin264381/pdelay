@@ -1,13 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_load_carr_d_b.html" title="LoadCarrDB" alt="" coords="37,85,129,112"/>
-<area shape="rect" id="node2" href="$classsim__space.html" title="sim_space" alt="" coords="208,85,293,112"/>
-<area shape="rect" id="node3" href="$class_n_body_file_i_o.html" title="NBodyFileIO" alt="" coords="375,136,470,163"/>
-<area shape="rect" id="node6" href="$class_n_body_visual.html" title="NBodyVisual" alt="" coords="585,56,682,83"/>
-<area shape="rect" id="node8" href="$class_physics_1_1_c_t_c_force.html" title="Physics::CTCForce" alt="" coords="566,5,701,32"/>
-<area shape="rect" id="node4" href="$class_n_body.html" title="NBody" alt="" coords="785,81,847,108"/>
-<area shape="rect" id="node5" href="$class_n_body___octree.html" title="NBody_Octree" alt="" coords="763,149,869,176"/>
-<area shape="rect" id="node7" href="$class_physics_1_1_recombination___n_body.html" title="Physics::Recombination\l_NBody" alt="" coords="552,158,715,199"/>
-<area shape="rect" id="node9" href="$class_physics_1_1_sim_condition.html" title="Physics::SimCondition" alt="" coords="5,161,160,188"/>
-<area shape="rect" id="node10" href="$class_physics_1_1_recombination.html" title="Physics::Recombination" alt="" coords="341,187,504,213"/>
-<area shape="rect" id="node11" href="$class_sim_progress.html" title="SimProgress" alt="" coords="34,35,131,61"/>
+<area shape="rect" id="node1" href="$class_prefer_f_p.html" title="PreferFP\&lt; T1, T2 \&gt;" alt="" coords="5,5,139,32"/>
 </map>

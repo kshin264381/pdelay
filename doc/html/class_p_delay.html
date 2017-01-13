@@ -134,7 +134,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetContinued</b> (boo
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetProcesses</b> (const unsigned int &amp;new_procs)</td></tr>
 <tr class="separator:a91396274d1d815e786705d393ed13589"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d5fab0b3a6f90519ceefc7301181250"><td class="memItemLeft" align="right" valign="top"><a id="a0d5fab0b3a6f90519ceefc7301181250"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDimension</b> (const <a class="el" href="struct____tuple__3_d__start__end__tuple____.html">Box</a> &amp;new_dimension)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDimension</b> (const <a class="el" href="struct____tuple__3_d__start__end____.html">Box</a> &amp;new_dimension)</td></tr>
 <tr class="separator:a0d5fab0b3a6f90519ceefc7301181250"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca376b49264a9266c39c8cd5e088a188"><td class="memItemLeft" align="right" valign="top"><a id="aca376b49264a9266c39c8cd5e088a188"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDimension</b> (const fp_t &amp;x_start, const fp_t &amp;x_end, const fp_t &amp;y_start, const fp_t &amp;y_end, const fp_t &amp;z_start, const fp_t &amp;z_end)</td></tr>
@@ -166,6 +166,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDeltaT</b> (const 
 <tr class="memitem:a47829628abfc478af575371de5c9ed1d"><td class="memItemLeft" align="right" valign="top"><a id="a47829628abfc478af575371de5c9ed1d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetSelfPath</b> (const char *argv_zero)</td></tr>
 <tr class="separator:a47829628abfc478af575371de5c9ed1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4e758604a303e3f13ed58cd4cebcd40"><td class="memItemLeft" align="right" valign="top"><a id="ae4e758604a303e3f13ed58cd4cebcd40"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMatDBFilePath</b> ()</td></tr>
+<tr class="separator:ae4e758604a303e3f13ed58cd4cebcd40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a060fca27fadb21df754bd9c3d622b263"><td class="memItemLeft" align="right" valign="top"><a id="a060fca27fadb21df754bd9c3d622b263"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetMatDBFile</b> (const std::string &amp;new_DB_file)</td></tr>
 <tr class="separator:a060fca27fadb21df754bd9c3d622b263"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,6 +187,23 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>SetSimMode</b> (std::s
 <tr class="memitem:ac9bfda17d9d27a28e323182a898abc32"><td class="memItemLeft" align="right" valign="top"><a id="ac9bfda17d9d27a28e323182a898abc32"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>SetSimMode</b> (const char *new_sim_mode)</td></tr>
 <tr class="separator:ac9bfda17d9d27a28e323182a898abc32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32cfb7b371f9df723a8e396c458634e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_delay.html#a32cfb7b371f9df723a8e396c458634e7">ReportStatus</a> ()</td></tr>
+<tr class="separator:a32cfb7b371f9df723a8e396c458634e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a300a3991d27bf29b4d6d57cbee3c0323"><td class="memItemLeft" align="right" valign="top"><a id="a300a3991d27bf29b4d6d57cbee3c0323"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ReportBias</b> ()</td></tr>
+<tr class="separator:a300a3991d27bf29b4d6d57cbee3c0323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a788b640bd166cca3a79d423ca7cb2cd4"><td class="memItemLeft" align="right" valign="top"><a id="a788b640bd166cca3a79d423ca7cb2cd4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ReportDimension</b> ()</td></tr>
+<tr class="separator:a788b640bd166cca3a79d423ca7cb2cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62fab3f57daf522b3773b4c95c39c0a"><td class="memItemLeft" align="right" valign="top"><a id="ae62fab3f57daf522b3773b4c95c39c0a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ReportDeltaT</b> ()</td></tr>
+<tr class="separator:ae62fab3f57daf522b3773b4c95c39c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e801f8870faae07f950a1846150ce21"><td class="memItemLeft" align="right" valign="top"><a id="a9e801f8870faae07f950a1846150ce21"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ReportSimMode</b> ()</td></tr>
+<tr class="separator:a9e801f8870faae07f950a1846150ce21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae17faacf5de765e05e9d0ab0a1183121"><td class="memItemLeft" align="right" valign="top"><a id="ae17faacf5de765e05e9d0ab0a1183121"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ReportAlgorithm</b> ()</td></tr>
+<tr class="separator:ae17faacf5de765e05e9d0ab0a1183121"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a044e1c8572ee9949c7081501e49b10ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_delay.html#a044e1c8572ee9949c7081501e49b10ca">PDelay</a> ()</td></tr>
 <tr class="separator:a044e1c8572ee9949c7081501e49b10ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1ec8650726ac2188547f9c9b34cc174"><td class="memItemLeft" align="right" valign="top"><a id="af1ec8650726ac2188547f9c9b34cc174"></a>
@@ -193,7 +213,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>SetSimMode</b> (const 
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>the main program .... will be running on this class. </p>
 
-<p>Definition at line <a class="el" href="pdelay_8h_source.html#l00052">52</a> of file <a class="el" href="pdelay_8h_source.html">pdelay.h</a>.</p>
+<p>Definition at line <a class="el" href="pdelay_8h_source.html#l00058">58</a> of file <a class="el" href="pdelay_8h_source.html">pdelay.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a044e1c8572ee9949c7081501e49b10ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a044e1c8572ee9949c7081501e49b10ca">&sect;&nbsp;</a></span>PDelay()</h2>
@@ -219,7 +239,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>SetSimMode</b> (const 
 </div><div class="memdoc">
 <p>Contructors and Destructors </p>
 
-<p>Definition at line <a class="el" href="pdelay_8h_source.html#l00176">176</a> of file <a class="el" href="pdelay_8h_source.html">pdelay.h</a>.</p>
+<p>Definition at line <a class="el" href="pdelay_8h_source.html#l00204">204</a> of file <a class="el" href="pdelay_8h_source.html">pdelay.h</a>.</p>
 
 </div>
 </div>
@@ -240,7 +260,45 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>SetSimMode</b> (const 
 </div><div class="memdoc">
 <p><a class="el" href="class_p_delay.html">PDelay</a> class method implementations... </p>
 
-<p>Definition at line <a class="el" href="pdelay_8cc_source.html#l00035">35</a> of file <a class="el" href="pdelay_8cc_source.html">pdelay.cc</a>.</p>
+<p>Definition at line <a class="el" href="pdelay_8cc_source.html#l00038">38</a> of file <a class="el" href="pdelay_8cc_source.html">pdelay.cc</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_p_delay_a08b5192fddec874a29dfdf3a122cc48e_cgraph.png" border="0" usemap="#class_p_delay_a08b5192fddec874a29dfdf3a122cc48e_cgraph" alt=""/></div>
+<map name="class_p_delay_a08b5192fddec874a29dfdf3a122cc48e_cgraph" id="class_p_delay_a08b5192fddec874a29dfdf3a122cc48e_cgraph">
+<area shape="rect" id="node2" href="class_p_delay.html#a32cfb7b371f9df723a8e396c458634e7" title="PDelay::ReportStatus" alt="" coords="176,5,324,32"/>
+<area shape="rect" id="node3" href="class_p_delay.html#ad41e78eb75c4dcc408d3d1e1cffc8bb5" title="PDelay::SetAlgorithm" alt="" coords="177,56,323,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a32cfb7b371f9df723a8e396c458634e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32cfb7b371f9df723a8e396c458634e7">&sect;&nbsp;</a></span>ReportStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PDelay::ReportStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Report Status</p>
+<p>Report status on current session </p>
+
+<p>Definition at line <a class="el" href="pdelay_8cc_source.html#l00590">590</a> of file <a class="el" href="pdelay_8cc_source.html">pdelay.cc</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_p_delay_a32cfb7b371f9df723a8e396c458634e7_icgraph.png" border="0" usemap="#class_p_delay_a32cfb7b371f9df723a8e396c458634e7_icgraph" alt=""/></div>
+<map name="class_p_delay_a32cfb7b371f9df723a8e396c458634e7_icgraph" id="class_p_delay_a32cfb7b371f9df723a8e396c458634e7_icgraph">
+<area shape="rect" id="node2" href="class_p_delay.html#a08b5192fddec874a29dfdf3a122cc48e" title="PDelay::cpuNUM" alt="" coords="201,5,324,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -262,7 +320,15 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>SetSimMode</b> (const 
 <p>Set and get methods.</p>
 <p>Set and Get methods... Implementation part </p>
 
-<p>Definition at line <a class="el" href="pdelay_8cc_source.html#l00320">320</a> of file <a class="el" href="pdelay_8cc_source.html">pdelay.cc</a>.</p>
+<p>Definition at line <a class="el" href="pdelay_8cc_source.html#l00434">434</a> of file <a class="el" href="pdelay_8cc_source.html">pdelay.cc</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_p_delay_ad41e78eb75c4dcc408d3d1e1cffc8bb5_icgraph.png" border="0" usemap="#class_p_delay_ad41e78eb75c4dcc408d3d1e1cffc8bb5_icgraph" alt=""/></div>
+<map name="class_p_delay_ad41e78eb75c4dcc408d3d1e1cffc8bb5_icgraph" id="class_p_delay_ad41e78eb75c4dcc408d3d1e1cffc8bb5_icgraph">
+<area shape="rect" id="node2" href="class_p_delay.html#a08b5192fddec874a29dfdf3a122cc48e" title="PDelay::cpuNUM" alt="" coords="200,5,323,32"/>
+</map>
+</div>
 
 </div>
 </div>

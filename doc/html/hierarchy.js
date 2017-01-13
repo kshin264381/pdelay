@@ -2,13 +2,15 @@ var hierarchy =
 [
     [ "__tuple_3D__< T >", "struct____tuple__3_d____.html", null ],
     [ "__tuple_3D__< fp_t >", "struct____tuple__3_d____.html", null ],
-    [ "__tuple_3D_start_end_tuple__< T >", "struct____tuple__3_d__start__end__tuple____.html", null ],
-    [ "__tuple_3D_start_end_tuple__< fp_t >", "struct____tuple__3_d__start__end__tuple____.html", null ],
+    [ "__tuple_3D_start_end__< T >", "struct____tuple__3_d__start__end____.html", null ],
+    [ "__tuple_3D_start_end__< fp_t >", "struct____tuple__3_d__start__end____.html", null ],
     [ "__tuple__< T >", "struct____tuple____.html", null ],
     [ "__tuple__< fp_t >", "struct____tuple____.html", null ],
+    [ "BHTree", "class_b_h_tree.html", null ],
     [ "Carrier", "class_carrier.html", null ],
     [ "DecorOutput", "class_decor_output.html", null ],
     [ "DataType::DictEntry< T >", "class_data_type_1_1_dict_entry.html", null ],
+    [ "DiffCoeff", "class_diff_coeff.html", null ],
     [ "EffMass", "class_eff_mass.html", null ],
     [ "LoadCarrDB", "class_load_carr_d_b.html", [
       [ "sim_space", "classsim__space.html", [
@@ -40,6 +42,7 @@ var hierarchy =
       [ "OcTree< T, AS >::Leaf", "class_oc_tree_1_1_leaf.html", null ]
     ] ],
     [ "pdTCAD::Node< FDATA, INDEX >", "classpd_t_c_a_d_1_1_node_3_01_f_d_a_t_a_00_01_i_n_d_e_x_01_4.html", null ],
+    [ "Octant", "class_octant.html", null ],
     [ "OcTree< T, AS >", "class_oc_tree.html", null ],
     [ "PDelay", "class_p_delay.html", null ],
     [ "PreferFP< T1, T2 >", "class_prefer_f_p.html", null ],

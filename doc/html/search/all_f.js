@@ -8,8 +8,8 @@ var searchData=
   ['settype',['setType',['../class_carrier.html#a62fa0b67edcc4cd3ece4d972b7987fa9',1,'Carrier']]],
   ['sim_5fspace',['sim_space',['../classsim__space.html',1,'']]],
   ['simcondition',['SimCondition',['../class_physics_1_1_sim_condition.html',1,'Physics']]],
+  ['simfinishmessage',['SimFinishMessage',['../class_n_body___octree.html#ab181e13dd13ef840303c7f15811349f4',1,'NBody_Octree']]],
   ['simprogress',['SimProgress',['../class_sim_progress.html',1,'']]],
-  ['size',['Size',['../classt__matrix.html#a08a433a6444ba2291a062877f359b113',1,'t_matrix']]],
   ['solver',['Solver',['../classpd_t_c_a_d_1_1_solver.html',1,'pdTCAD']]],
   ['solver_3c_20fp_5ft_20_3e',['Solver&lt; fp_t &gt;',['../classpd_t_c_a_d_1_1_solver.html',1,'pdTCAD']]],
   ['std',['std',['../namespacestd.html',1,'']]]
