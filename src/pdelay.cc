@@ -428,8 +428,8 @@ int PDelay::ParseOptions(int argc, char* argv[])
     if (!bias_str.empty()) {
         auto found_colon = bias_str.find_first_of(":");
         fp_t anode_bias, cathode_bias;
-        if (found_colon) {
-            auto str_anode = bias_str.substr(0, found_colon-1);
+        if (found_colon < bias_str.size()-1) {
+            auto str_anode = bias_str.substr(0, found_colon);
             auto str_cathode = bias_str.substr(found_colon+1);
             anode_bias = str_to_num<fp_t>(str_anode);
             cathode_bias = str_to_num<fp_t>(str_cathode);
