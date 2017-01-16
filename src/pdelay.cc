@@ -446,17 +446,17 @@ int PDelay::ParseOptions(int argc, char* argv[])
         auto x_ind = dimension_str.find_first_of("x");
         auto y_ind = dimension_str.find_first_of("y");
         auto z_ind = dimension_str.find_first_of("z");
-        auto x_portion = dimension_str.substr(x_ind+1, y_ind-1);
-        auto y_portion = dimension_str.substr(y_ind+1, z_ind-1);
+        auto x_portion = dimension_str.substr(x_ind+1, y_ind);
+        auto y_portion = dimension_str.substr(y_ind+1, z_ind);
         auto z_portion = dimension_str.substr(z_ind+1);
         auto x_colon = x_portion.find_first_of(":");
         auto y_colon = y_portion.find_first_of(":");
         auto z_colon = z_portion.find_first_of(":");
-        auto x_start = str_to_num<fp_t>(x_portion.substr(0, x_colon-1));
+        auto x_start = str_to_num<fp_t>(x_portion.substr(0, x_colon));
         auto x_end = str_to_num<fp_t>(x_portion.substr(x_colon+1));
-        auto y_start = str_to_num<fp_t>(y_portion.substr(0, y_colon-1));
+        auto y_start = str_to_num<fp_t>(y_portion.substr(0, y_colon));
         auto y_end = str_to_num<fp_t>(y_portion.substr(y_colon+1));
-        auto z_start = str_to_num<fp_t>(z_portion.substr(0, z_colon-1));
+        auto z_start = str_to_num<fp_t>(z_portion.substr(0, z_colon));
         auto z_end = str_to_num<fp_t>(z_portion.substr(z_colon+1));
         this->SetDimension(x_start, x_end, y_start, y_end, z_start, z_end);
     }
