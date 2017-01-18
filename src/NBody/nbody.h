@@ -32,7 +32,6 @@
 #include "unique_ptr.h"
 #include "physical_constants.h"
 #include "carrier.h"
-#include "decor_output.h"
 #include "datatype_hash.h"
 #include "visual.h"
 #include "CTCForce.h"
@@ -88,15 +87,6 @@ protected:
     // Initialize simulation depending on input methods.
     int InitSim();
 
-    // Simulation control elements
-    DecorOutput SimOutput;
-    std::clock_t current_sim_time;
-    std::clock_t start_time;
-    void ShowSimStatus();
-
-    // Just finish up message
-    void SimFinishMessage();
-
     /**
      *
      * Drift and Kick algorithm
@@ -119,15 +109,6 @@ public:
     int RunSDKD(); // Select Drift Kick Drift algorithm
     int RunSKDK(); // Select Kick Drift Kick algorithm
 
-    // Delta_t evaluator.
-    void SetVariableDeltaT();
-    // Returns variable delta_t algorithm
-    void UnsetDeltaT()
-    {
-        this->SetVariableDeltaT();
-        this->forced_delta_t = false;
-    }
-
     // Setting up num of processes
     int SetProcesses(const unsigned int& processes)
     {
@@ -149,6 +130,7 @@ public:
         this->forced_delta_t = false;
         this->delta_t = 0.0;
         this->len_scale_f = static_cast<fp_t>(1e6);
+        this->sim_algorithm_str = "(One-To-One)";
     }
 
     // A correct constructor.

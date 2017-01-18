@@ -1,4 +1,3 @@
 <map id="NBody::update_force" name="NBody::update_force">
 <area shape="rect" id="node2" href="$class_n_body_visual.html#a333fbac177fcd6c6dc968a681b0bbf53" title="NBodyVisual::SetOutputMode" alt="" coords="196,5,392,32"/>
-<area shape="rect" id="node3" href="$class_sim_progress.html#a702f4a01d7ae83e0d3faec360c0db1e9" title="SimProgress::print\l_elapsed_time" alt="" coords="229,57,359,98"/>
 </map>

@@ -42,8 +42,7 @@ public:
     std::string carrier_info(spCarrier& carrier);
     int write_collected_carrier_info(spCarrier& carrier);
     int write_lost_carrier_info(spCarrier& carrier);
-    int write_recombination_carrier_info(
-        spCarrier& carrier, spCarrier& other);
+    int write_recombination_carrier_info(spCarrier& carrier, spCarrier& other);
     int write_mat_recomb_carrier_info(spCarrier& carrier);
     std::string GetBaseFilename();
 
@@ -51,7 +50,6 @@ public:
     int generate_carriers();
     // Generate carriers from database file
     int generate_carriers_db();
-
 
     // Constructors and Destructors
     NBodyFileIO() : \

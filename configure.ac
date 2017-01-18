@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.63])
-AC_INIT([pdelay], [0.0.1], [kshin@aps.anl.gov])
+AC_INIT([pdelay], [1.0.0], [kshin@aps.anl.gov])
 AC_CONFIG_AUX_DIR(config)
 AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE

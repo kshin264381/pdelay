@@ -9,6 +9,7 @@
 **/
 
 #include "fputils.h"
+#include "sim_progress.h"
 #include "nbody.h"
 
 /**
@@ -334,7 +335,9 @@ int NBody::InitSim()
     this->collected_carriers = 0;
     this->SimOutput = DecorOutput(65);
     this->SimOutput.SetType(2);
-    this->current_sim_time = std::clock();
+    //this->current_sim_time = std::clock();
+    this->current_sim_time = CLOCK_NOW;
+    this->sim_algorithm_str = "(One-To-One)";
 
     // Prepare logfile and write preamble.
     this->simulation_logfile.open(this->logfile_name, ios::out | ios::app);
@@ -394,70 +397,6 @@ int NBody::InitSim()
     return 0;
 }
 
-
-// Prints out simulation status
-void NBody::ShowSimStatus()
-{
-    std::stringstream sst;
-
-    // show current status
-    this->current_sim_time = std::clock();
-    sst.str(std::string());
-    sst.clear(); // clearing out any eof or fail stuff..
-    sst << "*** (One-To-One) Step [" \
-        << (this->sim_step) << "] ***" \
-        << std::endl \
-        << "Elapsed Time: " \
-        << this->print_elapsed_time() \
-        << std::endl \
-        << "Elapsed Simulation Time: " \
-        << this->format_time(this->current_sim_time - this->start_time) \
-        << std::endl \
-        << "Delta T at this step: " \
-        << this->delta_t << " seconds" \
-        << std::endl \
-        << "Total # of carriers: " \
-        << this->Carriers.size() \
-        << std::endl \
-        << "# of Electrons: " \
-        << this->num_elec \
-        << std::endl \
-        << "# of Holes: " \
-        << this->num_hole \
-        << std::endl \
-        << "Collected carriers so far: " \
-        << this->collected_carriers \
-        << std::endl \
-        << "Lost carriers so far: " \
-        << this->lost_carriers \
-        << std::endl;
-    this->SimOutput.PutString(sst.str());
-    this->SimOutput.Print();
-    this->SimOutput.FlushText();
-}
-
-
-
-void NBody::SimFinishMessage()
-{
-    // Mark the end time.
-    auto end_time = std::clock();
-    auto sim_duration = \
-        this->format_time(end_time - this->start_time);
-
-    // Print out elapsed simulation time message.
-    std::stringstream st_ss;
-    st_ss \
-        << "Simulation Finished!!!" \
-        << std::endl \
-        << "It took " \
-        << sim_duration \
-        << std::endl;
-    SimOutput.PutString(st_ss.str());
-    SimOutput.Print();
-
-    return;
-}
 
 
 /**
@@ -663,32 +602,6 @@ int NBody::RunSKDK()
     return 0;
 }
 
-
-
-// Estimates delta_t for next step.
-//
-// tau < nu / sqrt(G*density)
-// --> where G(Gravitational constant)
-//        was replaced by Coulomb's constant.
-//
-void NBody::SetVariableDeltaT()
-{
-    // Density: /m^3
-    auto Density = \
-        this->Carriers.size()/ \
-        (this->GetVolume()*1e-2*1e-2*1e-2);
-
-    // Stability & accuracy constant. Default is 0.03
-    //
-#ifndef __MULTIPRECISION__
-    fp_t new_delta_t = \
-        nu / std::sqrt(k_e*Density);
-#else
-    fp_t new_delta_t = \
-        nu / boost::math::sqrt(k_e*Density);
-#endif
-    this->delta_t = new_delta_t;
-}
 
 
 /**

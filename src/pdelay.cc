@@ -147,7 +147,6 @@ void PDelay::usage(const char* exec_name)
 // Get path(dir) from given file std::string
 std::string PDelay::GetPath(std::string some_file_path)
 {
-// #if !defined(__CYGWIN__)
     // Setting up slash
     auto full_path_str = this->GetFullPath(some_file_path);
     auto full_path = fs::wpath(full_path_str);
@@ -163,12 +162,6 @@ std::string PDelay::GetPath(std::string some_file_path)
         exit(-1);
     }
 
-// #else
-
-
-
-// #endif
-
     return path_dir;
 }
 // Same one as above but accepts const char* 
@@ -180,7 +173,6 @@ std::string PDelay::GetPath(const char* some_file_path)
 // Get full file path
 std::string PDelay::GetFullPath(std::string some_file_path)
 {
-// #if !defined(__CYGWIN__)
     // Setting up slash
     fs::wpath slash("/");
     fs::wpath preferred_slash = slash.make_preferred().native();
@@ -197,12 +189,6 @@ std::string PDelay::GetFullPath(std::string some_file_path)
             << full_path_str << std::endl;
         exit(-1);
     }
-
-// #else
-
-
-// #endif
-
 
     return full_path_str;
 }
@@ -399,7 +385,7 @@ int PDelay::ParseOptions(int argc, char* argv[])
     // Prepare database file path
     SetMatDBFilePath();
     std::cout << input_file << std::endl;
-        // if no input files are given, ditch the session.
+    // if no input files are given, ditch the session.
     if (input_file.empty() || input_file == "")
     {
         usage(argv[0]);
@@ -602,7 +588,7 @@ int PDelay::SetSimMode(std::string mode)
 
     std::string sim_mode_print = "";
     int ret_code = 0;
-    switch (sim_mode_i) {
+    switch (sim_mode_i) {       
     case onetoone:
         sim_mode_print = "One-To-One";
     case octree:

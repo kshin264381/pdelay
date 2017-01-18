@@ -34,7 +34,6 @@
 #include "physical_constants.h"
 #include "carrier.h"
 #include "pbar.h"
-#include "decor_output.h"
 #include "datatype_hash.h"
 #include "visual.h"
 #include "CTCForce.h"
@@ -117,14 +116,9 @@ protected:
     // Output data file format
     unsigned int log_carrier_data_format;
 
-    // Simulation status output
-    DecorOutput SimOutput;
-    void SimFinishMessage();
-    void ShowSimStatus();
-
     // Simulation time monitors.
-    std::clock_t current_sim_time;
-    std::clock_t start_time;
+    // std::clock_t current_sim_time;
+    // std::clock_t start_time;
 
     // Pass force calculation for the very first loop if read from
     // Carrier database. (Continuation case)
@@ -156,15 +150,6 @@ public:
         return ss.str();
     }
 
-    // Delta_t evaluator.
-    void SetVariableDeltaT();
-    // Returns variable delta_t algorithm
-    void UnsetDeltaT()
-    {
-        this->SetVariableDeltaT();
-        this->forced_delta_t = false;
-    }
-
     // Set up carrier data visualization data format
     void SetCarrierDataFormat(unsigned int N)
     {
@@ -180,8 +165,7 @@ public:
         alpha(FP_T(0.5))
     {
         spOctant spCV = std::make_shared<Octant>(Octant({}));
-        //Octree OcTreeInit = Octree(0, spCV, true);
-        //Tree = std::make_shared<Octree>(OcTreeInit);
+        this->sim_algorithm_str = "(Barnes-Hut)";
     }
     
     

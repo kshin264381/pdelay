@@ -15,8 +15,12 @@
 #include <ctime>
 #include <string>
 #include <sstream>
+#include <chrono>
 
 #include "fputils.h"
+#include "decor_output.h"
+
+#define CLOCK_NOW std::chrono::system_clock::now();
 
 
 class SimProgress
@@ -30,9 +34,17 @@ public:
 
     bool forced_delta_t; // forced delta_t or not
 
+    // Simulation timing
+    std::chrono::time_point<std::chrono::system_clock> current_sim_time, start_time;
+    std::string sim_algorithm_str;
+
     // methods
     std::string print_elapsed_time();
     std::string format_time(std::clock_t elapsed_sim_time);
+    std::string format_time(std::chrono::duration<fp_t> dur);
+
+    // Simulation status output
+    DecorOutput SimOutput;
 
     //
     // delta_t control...
@@ -64,6 +76,7 @@ public:
     SimProgress() : \
         delta_t(static_cast<fp_t>(0.0)),
     	elapsed_time(static_cast<fp_t>(0.0)),
+        sim_algorithm_str(std::string({})),
         gen_carr_log(true),
         forced_delta_t(false),
         sim_step(0),

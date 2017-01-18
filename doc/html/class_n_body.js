@@ -17,10 +17,6 @@ var class_n_body =
     [ "Select", "class_n_body.html#af0cc7f95a8eb3a4395b9f31ece1e8992", null ],
     [ "SetCarrierDataFormat", "class_n_body.html#ae8135fa5f2f30a3506edd0061ee795b0", null ],
     [ "SetProcesses", "class_n_body.html#a49e90ba60bc3ea12ff62a676c9183471", null ],
-    [ "SetVariableDeltaT", "class_n_body.html#ab638a56f283bbacacf8db507456a63ae", null ],
-    [ "ShowSimStatus", "class_n_body.html#a14a704290161d75a4d12ee1b930ffc16", null ],
-    [ "SimFinishMessage", "class_n_body.html#abc367f24383ca7542bc45ebe0e8a5b79", null ],
-    [ "UnsetDeltaT", "class_n_body.html#a32462470f23e5c6068b34465aa2b2682", null ],
     [ "update_all_carr_position", "class_n_body.html#aa95ab922a3bcd96f09541d5ec72c0927", null ],
     [ "update_all_carr_position_sub", "class_n_body.html#aa980376ff02f381e0cd4a6d3f725cde0", null ],
     [ "update_all_force", "class_n_body.html#a9e05cf09b326a3794d76885d44a117db", null ],
@@ -29,9 +25,6 @@ var class_n_body =
     [ "update_carr_position", "class_n_body.html#a43569a2b14690452f501593997ba327f", null ],
     [ "update_force", "class_n_body.html#ab9601e59b367d72c91c3af2ce70612ab", null ],
     [ "continued", "class_n_body.html#ae5de9160ae38c1f8c304ef1f7ad16294", null ],
-    [ "current_sim_time", "class_n_body.html#a2e8b7c5e2a8ec5bc5a6e1efa5dbd9644", null ],
     [ "log_carrier_data_format", "class_n_body.html#aeea781b6a01e8d795f00764a8a49a843", null ],
-    [ "pass_forcecal", "class_n_body.html#aea66c06eaa6b2f7f611b3d07839734e5", null ],
-    [ "SimOutput", "class_n_body.html#a4b0b8a4812752537e5a75a59e2b7a258", null ],
-    [ "start_time", "class_n_body.html#aac8d133b3df9130502b99f9153145858", null ]
+    [ "pass_forcecal", "class_n_body.html#aea66c06eaa6b2f7f611b3d07839734e5", null ]
 ];

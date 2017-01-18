@@ -127,6 +127,19 @@ public:
         this->len_scale_f = (meter / dimension).value();
     }
 
+    // delta_t control
+    void SetVariableDeltaT();
+    // Returns to variable delta_t algorithm
+    void UnsetDeltaT()
+    {
+        this->SetVariableDeltaT();
+        this->forced_delta_t = false;
+    }
+
+    // Simulation progress report tools (needs Carrier)
+    void ShowSimStatus();
+    void SimFinishMessage();
+
     /* Constructors and destructors */
     sim_space() : \
         InitialData(nullptr),

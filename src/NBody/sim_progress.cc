@@ -10,6 +10,8 @@
  *
 **/
 
+#include <cmath>
+
 #include "sim_progress.h"
 
 // Prints out elapsed time with a few decoration.
@@ -81,3 +83,50 @@ std::string SimProgress::format_time(std::clock_t elapsed_sim_time)
 
     return ss.str();
 }
+
+// Prints simulation time (chrono version)
+std::string SimProgress::format_time(std::chrono::duration<fp_t> dur)
+{
+    auto sim_time_in_seconds = dur.count();
+    std::stringstream ss;
+
+    if (sim_time_in_seconds < 1.0) {
+        ss << sim_time_in_seconds << " seconds";
+        return ss.str();
+    }
+
+    auto rem = double(0.0);
+    auto years = floor(sim_time_in_seconds / (3600*24*365));
+    rem = sim_time_in_seconds - ((double)years * (3600*24*365));
+    if (years) ss << years << ((years > 1)?" years ":" year ");
+
+    auto months = floor(rem / (3600*24*30));
+    rem = rem - (double(months)*(3600*24*30));
+    if (months) ss << months << ((months > 1)?" months ":" month ");
+
+    auto weeks = floor(rem / (3600*24*7));
+    rem = rem - (double(weeks)*(3600*24*7));
+    if (weeks) ss << weeks << ((weeks > 1)?" weeks ":" week ");
+    
+    auto days = floor(rem / (3600*24));
+    rem = rem - (double(days)*(3600*24));
+    if (days) ss << days << ((days > 1)?" days ":" day ");
+    
+    auto hours = floor(rem / 3600);
+    rem = rem - (double(hours)*3600);
+    if (hours) ss << hours << ((hours > 1)?" hours ":" hour ");
+    
+    auto minutes = floor(rem / 60);
+    rem = rem - (double(minutes)*60);
+    if (minutes) ss << minutes << ((minutes > 1)?" minutes ":" minute ");
+    
+    auto seconds = rem;
+    if (seconds) ss << seconds << ((seconds > 1.0)?" seconds":" second");
+
+    return ss.str();
+}
+
+
+
+
+
