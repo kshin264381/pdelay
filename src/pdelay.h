@@ -23,7 +23,7 @@
 #include "nbody.h"
 #include "nbody_octree.h"
 #include "unique_ptr.h"
-#include "cxxopts.h"    // Original file had hpp extension but changed it to maintain consistency.
+#include "cxxopts.hpp" // https://github.com/jarro2783/cxxopts
 #include "visual.h"
 #include "Utils.h"
 
