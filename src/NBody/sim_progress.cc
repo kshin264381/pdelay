@@ -85,7 +85,7 @@ std::string SimProgress::format_time(std::clock_t elapsed_sim_time)
 }
 
 // Prints simulation time (chrono version)
-std::string SimProgress::format_time(std::chrono::duration<fp_t> dur)
+std::string SimProgress::format_time(ChronoDuration dur)
 {
     auto sim_time_in_seconds = dur.count();
     std::stringstream ss;

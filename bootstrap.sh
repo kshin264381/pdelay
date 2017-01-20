@@ -28,6 +28,10 @@ BREWHOME="/data/KSHIN/local"
 DEBUG_COMPILER_FLAGS="-ggdb3"
 RELEASE_COMPILER_FLAGS="-ggdb3 -O3"
 
+# Boost dir for cygwin
+CYGBOOSTDIR="/usr/include"
+CYGBOOSTLIBDIR="/usr/lib"
+
 # Dealing with MKL
 MKLROOT="${BREWHOME}/intel/mkl"
 MKLLIB="-Wl,--start-group ${MKLROOT}/lib/intel64/libmkl_intel_ilp64.a ${MKLROOT}/lib/intel64/libmkl_core.a ${MKLROOT}/lib/intel64/libmkl_gnu_thread.a -Wl,--end-group -lpthread -lm -ldl"
@@ -77,15 +81,21 @@ elif [[ $ARG == "mingw64.debug" ]] ; then
     BOOST_ROOT="/local64/dst/boost"
     BOOST_LIBDIR="/local64/dst/boost/lib"
 elif [[ $ARG == "cygwin.debug" ]] ; then
-    ARG_CFLAGS="$DEBUG_COMPILER_FLAGS -I/usr/include"
-    ARG_CXXFLAGS="$DEBUG_COMPILER_FLAGS -I/usr/include"
+    ARG_LDFLAGS="-L${CYGBOOSTLIBDIR} -Wl,-rpath-link,${CYGBOOSTLIBDIR}"
+    ARG_LD_LIBRARY_PATH="${CYGBOOSTLIBDIR}:${LD_LIBRARY_PATH}"
+    ARG_CFLAGS="$DEBUG_COMPILER_FLAGS -I/usr/include -I${CYGBOOSTDIR}"
+    ARG_CXXFLAGS="$DEBUG_COMPILER_FLAGS -I/usr/include -I${CYGBOOSTDIR}"
     M4FOLDER=m4.2.69
-    BOOST_LIBDIR="/usr/lib"
+    BOOST_ROOT=${CYGBOOSTDIR}
+    BOOST_LIBDIR=${CYGBOOSTLIBDIR}
 elif [[ $ARG == "cygwin.release" ]] ; then
-    ARG_CFLAGS="$RELEASE_COMPILER_FLAGS -I/usr/include"
-    ARG_CXXFLAGS="$RELEASE_COMPILER_FLAGS -I/usr/include"
+    ARG_LDFLAGS="-L${CYGBOOSTLIBDIR} -Wl,-rpath-link,${CYGBOOSTLIBDIR}"
+    ARG_LD_LIBRARY_PATH="${CYGBOOSTLIBDIR}:${LD_LIBRARY_PATH}"
+    ARG_CFLAGS="$DEBUG_COMPILER_FLAGS -I/usr/include -I${CYGBOOSTDIR}"
+    ARG_CXXFLAGS="$DEBUG_COMPILER_FLAGS -I/usr/include -I${CYGBOOSTDIR}"
     M4FOLDER=m4.2.69
-    BOOST_LIBDIR="/usr/lib"
+    BOOST_ROOT=${CYGBOOSTDIR}
+    BOOST_LIBDIR=${CYGBOOSTLIBDIR}
 elif [[ $ARG == "release" ]] ; then
     ARG_LDFLAGS="${MKLLIB}"
     ARG_CFLAGS="$RELEASE_COMPILER_FLAGS ${MKLCFLAGS}"
@@ -119,21 +129,13 @@ fi
 ACONF=$(command -v autoreconf)
 $ACONF --force --install -I config -I $M4FOLDER
 
-if [[ $ARG == "mingw64.debug" || $ARG == "mingw64.release" ]] ; then
-  CC=$ARG_CC \
-  CXX=$ARG_CXX \
-  CFLAGS=$ARG_CFLAGS \
-  CXXFLAGS=$ARG_CFLAGS \
-  LD_LIBRARY_PATH=$ARG_LD_LIBRARY_PATH \
-  $PWD/configure --with-boost-libdir=$BOOST_LIBDIR
-else
-  CC=$ARG_CC \
-  CXX=$ARG_CXX \
-  CFLAGS=$ARG_CFLAGS \
-  CXXFLAGS=$ARG_CFLAGS \
-  LD_LIBRARY_PATH=$ARG_LD_LIBRARY_PATH \
-  $PWD/configure --with-boost-libdir=$BOOST_LIBDIR
-fi
+CC=$ARG_CC \
+CXX=$ARG_CXX \
+CFLAGS=$ARG_CFLAGS \
+CXXFLAGS=$ARG_CFLAGS \
+LD_LIBRARY_PATH=$ARG_LD_LIBRARY_PATH \
+$PWD/configure --with-boost-libdir=$BOOST_LIBDIR
+
 
 if [ -f ./Makefile ] ; then
     make -j $CPUNUM

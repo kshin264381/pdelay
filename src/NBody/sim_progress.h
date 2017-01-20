@@ -15,13 +15,21 @@
 #include <ctime>
 #include <string>
 #include <sstream>
-#include <chrono>
-
 #include "fputils.h"
 #include "decor_output.h"
 
-#define CLOCK_NOW std::chrono::system_clock::now();
-
+#ifndef __CYGWIN__
+#include <boost/chrono.hpp>
+using ChronoTime = boost::chrono::high_resolution_clock;
+using ChronoDuration = boost::chrono::duration<fp_t>;
+using ChronoFixedTime = boost::chrono::time_point<ChronoTime>;
+#else
+#include <chrono>
+using ChronoTime = std::chrono::high_resolution_clock;
+using ChronoDuration = std::chrono::duration<fp_t>;
+using ChronoFixedTime = std::chrono::time_point<ChronoTime>;
+#endif
+#define CLOCK_NOW ChronoTime::now();
 
 class SimProgress
 {
@@ -35,17 +43,13 @@ public:
     bool forced_delta_t; // forced delta_t or not
 
     // Simulation timing
-#ifndef _MSC_VER
-    std::chrono::time_point<std::chrono::high_resolution_clock> current_sim_time, start_time;
-#else
-    std::chrono::time_point<std::chrono::system_clock> current_sim_time, start_time;
-#endif
+    ChronoFixedTime current_sim_time, start_time;
     std::string sim_algorithm_str;
 
     // methods
     std::string print_elapsed_time();
     std::string format_time(std::clock_t elapsed_sim_time);
-    std::string format_time(std::chrono::duration<fp_t> dur);
+    std::string format_time(ChronoDuration dur);
 
     // Simulation status output
     DecorOutput SimOutput;
