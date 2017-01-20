@@ -35,7 +35,11 @@ public:
     bool forced_delta_t; // forced delta_t or not
 
     // Simulation timing
+#ifndef _MSC_VER
     std::chrono::time_point<std::chrono::high_resolution_clock> current_sim_time, start_time;
+#else
+    std::chrono::time_point<std::chrono::system_clock> current_sim_time, start_time;
+#endif
     std::string sim_algorithm_str;
 
     // methods

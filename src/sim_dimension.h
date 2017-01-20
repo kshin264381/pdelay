@@ -14,16 +14,19 @@
 #include "sim_space.h"
 
 /****************************************************************************/
-/************** Fix this area if you wish to change any stuff ***************/
+/***** Fix this area if you wish to change default parameters ***************/
 /****************************************************************************/
 
+// Default temperature
+const fp_t DEF_TEMP = 300.0;
+
 // Sensor dimension (in um)
-const fp_t X_START = -10000;
-const fp_t X_END = 10000;
-const fp_t Y_START = -10000;
-const fp_t Y_END = 10000;
+const fp_t X_START = -10000.0;
+const fp_t X_END = 10000.0;
+const fp_t Y_START = -10000.0;
+const fp_t Y_END = 10000.0;
 const fp_t Z_START = 0.0;
-const fp_t Z_END = 500;
+const fp_t Z_END = 500.0;
 
 // Bias (in V)
 const fp_t BIAS_ANODE = -200;     // Bulk electrode side: photons impinge here...

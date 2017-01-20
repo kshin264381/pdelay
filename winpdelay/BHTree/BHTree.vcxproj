@@ -90,7 +90,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <OpenMPSupport>true</OpenMPSupport>
-      <AdditionalIncludeDirectories>E:\Libs\boost_1_62_0;$(SolutionDir)..\src;$(SolutionDir)..\src\utils;$(SolutionDir)..\src\TCAD;$(SolutionDir)..\src\octree;$(SolutionDir)..\src\physics;$(SolutionDir)..\src\NBody;$(SolutionDir)..\src\BHTree;$(SolutionDir)..\src\sqlite3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(SolutionDir)..\src;$(SolutionDir)..\src\utils;$(SolutionDir)..\src\TCAD;$(SolutionDir)..\src\octree;$(SolutionDir)..\src\physics;$(SolutionDir)..\src\NBody;$(SolutionDir)..\src\BHTree;$(SolutionDir)..\src\sqlite3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

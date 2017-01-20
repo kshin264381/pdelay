@@ -161,6 +161,7 @@ public:
     void SetInsulatorMaterial(const char* new_insulator_material);
     void SetTemperature(const fp_t& new_temp);
     void SetDeltaT(const fp_t& new_delta_t);
+    void SetDopingConc(const fp_t& new_dop_c);
     bool SetSelfPath(const char* argv_zero);
     void SetMatDBFilePath();
     bool SetMatDBFile(const std::string& new_DB_file);
@@ -189,9 +190,9 @@ public:
     **/
     // the basic constructor --> Don't use this
     PDelay() : \
-        sim_mode("OneToOne"),
-        algorithm("OneShot"),
-        sim_mode_i(onetoone),
+        sim_mode({}),
+        algorithm({}),
+        sim_mode_i(octree),
         sim_algorithm_i(oneshot),
         self_path("."),
         input_file({}),

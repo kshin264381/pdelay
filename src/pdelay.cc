@@ -352,20 +352,24 @@ int PDelay::InitOctreeC()
 // parse options and establish inputs.
 int PDelay::ParseOptions(int argc, char* argv[])
 {
+    options = cxxopts::Options("PDelay", "A Simple(?) plasma delay effect simulator");
     options.add_options()
         ("p,procs", "Number of processes", cxxopts::value<unsigned int>(num_of_procs))
         ("i,input", "Input MonteCarlo Simulation File", cxxopts::value<std::string>(input_file))
         ("h,help", "Shows help message")
-        ("d,database", "Material Database File", cxxopts::value<std::string>(database_file))
+        ("db", "Material Database File", cxxopts::value<std::string>(database_file)->default_value(MAT_DB_FILE))
         ("c,continue", "Carrier information database file", cxxopts::value<std::string>(cr_file))
-        ("t,temperature", "Temperature", cxxopts::value<fp_t>(temperature))
-        ("e,delta_t", "Time step", cxxopts::value<fp_t>(delta_t))
-        ("a,algorithm", "N-Body calculation model", cxxopts::value<std::string>(algorithm))
-        ("m,model", "N-Body simulation mode", cxxopts::value<std::string>(sim_mode))
-        ("o,doping_concentration", "Doping Concentration of the sensor", cxxopts::value<fp_t>(doping_concentration))
-        ("l,carrier_log", "Generate carrier log (default True)", cxxopts::value<std::string>(c_log_str))
-        ("b,bias", "Setting up bias <bias_between_electrode> or <anode>:<cathode>", cxxopts::value<std::string>(bias_str))
-        ("n,dimension", "Setting up dimension x<x_start>:<x_end>y<y_start>:<y_end>z<z_start>:<z_end>", cxxopts::value<std::string>(dimension_str));
+        ("temp", "Temperature", cxxopts::value<fp_t>(temperature))
+        ("dt", "Time step", cxxopts::value<fp_t>(delta_t))
+        ("al", "N-Body calculation model (SingleShot, SKDK SDKD)", cxxopts::value<std::string>(algorithm)->default_value("OneShot"))
+        ("m,model", "N-Body simulation mode", cxxopts::value<std::string>(sim_mode)->default_value("Octree"))
+        ("imp", "Doping Concentration (impurity) of the sensor", cxxopts::value<fp_t>(doping_concentration))
+        ("bkm", "Background material", cxxopts::value<std::string>(DetMaterial)->default_value(MATERIAL))
+        ("inm", "Insulator material", cxxopts::value<std::string>(InsulatorMaterial))
+        ("l,carrier_log", "Generate carrier log (default: False)", cxxopts::value<std::string>(c_log_str)->default_value("False"))
+        ("b,bias", "Setting up bias <bias_between_electrode> or <anode>:<cathode>", cxxopts::value<std::string>(bias_str)->default_value("-200:-1"))
+        ("dim", "Setting up dimension x<x_start>:<x_end>y<y_start>:<y_end>z<z_start>:<z_end>", cxxopts::value<std::string>(dimension_str)->default_value("x-10000:10000y-10000:10000z0:500"))
+        ;
 
     options.parse_positional({ "input", "procs", "positional" });
     options.parse(argc, argv);
@@ -391,6 +395,13 @@ int PDelay::ParseOptions(int argc, char* argv[])
         usage(argv[0]);
         exit(0);
     }
+
+    // Set up materials
+    this->SetDetMaterial(DetMaterial);
+    this->SetInsulatorMaterial(InsulatorMaterial);
+
+    // Set up background doping concentration
+    this->SetDopingConc(doping_concentration);
 
     // If -l option was not given (delta_t)
     if (fp_equal(delta_t, FP_T(0.0))) {
@@ -541,6 +552,10 @@ void PDelay::SetDeltaT(const fp_t& new_delta_t)
     }
 
     ReportDeltaT();
+}
+void PDelay::SetDopingConc(const fp_t& new_dop_c)
+{
+    this->doping_concentration = new_dop_c;
 }
 bool PDelay::SetSelfPath(const char* argv_zero)
 {

@@ -14,8 +14,8 @@
 #include "materials.h"
 
 /* handling missing M_PI */
-#ifndef M_PI
 #include <cmath>
+#ifndef M_PI
 #ifndef _MSC_VER
 #define M_PI 4 * std::atan(1.0)
 #else
