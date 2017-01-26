@@ -18,7 +18,7 @@
 #include "fputils.h"
 #include "decor_output.h"
 
-#ifndef __CYGWIN__
+#ifdef _MSC_VER
 #include <boost/chrono.hpp>
 using ChronoTime = boost::chrono::high_resolution_clock;
 using ChronoDuration = boost::chrono::duration<fp_t>;
