@@ -403,13 +403,8 @@ int PDelay::ParseOptions(int argc, char* argv[])
     // Set up background doping concentration
     this->SetDopingConc(doping_concentration);
 
-    // If -l option was not given (delta_t)
-    if (fp_equal(delta_t, FP_T(0.0))) {
-    }
-    else {
-        std::cout << "Setting delta_t as: " \
-            << delta_t << " seconds." << std::endl;
-    }
+    // Handle --dt option (delta_t)
+    this->SetDeltaT(delta_t);
 
     // Set up simulation mode
     this->SetSimMode(sim_mode);
