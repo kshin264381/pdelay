@@ -384,8 +384,10 @@ MatData::MatData(const char* sqlite3_filename) : MatData()
     const char*       data = "Callback function called!!";
 
     // Stop everything if sqlite3_filename is a bogus
-    if ((sqlite3_filename != nullptr) && (sqlite3_filename == '\0')) {
-        std::cerr \
+    //if ((sqlite3_filename == nullptr) && (sqlite3_filename == '\0')) {
+    if (sqlite3_filename == nullptr) {
+      
+        std::cerr                                             \
             << "Ouch!! Material Database file is not given!!" \
             << std::endl;
         exit(-1);

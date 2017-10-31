@@ -639,7 +639,7 @@ void PDelay::ReportStatus()
 void PDelay::ReportBias()
 {
     // Shows bias info.
-    std::cout << "=============== Bias Info. ===============" << std::endl;
+    std::cout << "\n=============== Bias Info. ===============" << std::endl;
     std::cout << "Anode bias: " << DetBias.x << " V" << std::endl;
     std::cout << "Cathode bias: " << DetBias.y << " V" << std::endl;
     std::cout << "Thus, the bias between Anode and Cathode is..." << std::endl;
@@ -651,7 +651,7 @@ void PDelay::ReportBias()
 void PDelay::ReportDimension()
 {
     // Shows dimension info.
-    std::cout << "========= Sensor Dimension Info. =========" << std::endl;
+    std::cout << "\n========= Sensor Dimension Info. =========" << std::endl;
     //std::cout << "x.start: " << SensorChunk.x_start << " um" << std::endl;
     //std::cout << "x.end: " << SensorChunk.x_end << " um" << std::endl;
     //std::cout << "y.start: " << SensorChunk.y_start << " um" << std::endl;

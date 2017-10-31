@@ -147,6 +147,7 @@
 	},
 	"file_history":
 	[
+		"/home/beams/KSHIN/pdelay/src/NBody/nbody.cc",
 		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/src/NBody/typedefs.h",
 		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/src/NBody/nbody.cc",
 		"/C/Users/kshin.SHINLT/Documents/GitHub/pdelay/src/utils/cxxopts.h",
@@ -222,7 +223,6 @@
 		"/home/beams/KSHIN/pdelay/src/utils/fputils.h",
 		"/home/beams/KSHIN/pdelay/src/NBody/nbody_octree.cc",
 		"/home/beams/KSHIN/pdelay/src/NBody/nbody_octree.h",
-		"/home/beams/KSHIN/pdelay/src/NBody/nbody.cc",
 		"/home/beams/KSHIN/pdelay/src/physics/physical_constants.h",
 		"/home/beams/KSHIN/pdelay/src/utils/pbar.cc",
 		"/home/beams/KSHIN/pdelay/src/utils/fputils.cc",
@@ -416,7 +416,7 @@
 		"cols":
 		[
 			0.0,
-			0.585881075284,
+			0.509375051188,
 			1.0
 		],
 		"rows":

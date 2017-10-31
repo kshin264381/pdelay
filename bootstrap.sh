@@ -25,6 +25,9 @@ BOOST_LIBDIR="/usr/local/lib"
 # sushi home brewing directory: change this if they change home directory again...
 BREWHOME="/data/KSHIN/local"
 
+# Sushi brew dir
+SUSHI_BREW_DIR=$BREWHOME/lib
+
 DEBUG_COMPILER_FLAGS="-ggdb3"
 RELEASE_COMPILER_FLAGS="-ggdb3 -O3"
 
@@ -39,19 +42,19 @@ MKLCFLAGS="-DMKL_ILP64 -fopenmp -m64 -I${MKLROOT}/include"
 
 if [[ $ARG == "sushi.debug" ]] ; then
     DEBUG_COMPILER_FLAGS="-g3 -gdwarf-2"
-    ARG_LDFLAGS="-L$BREWHOME/lib64 -Wl,-rpath-link,$BREWHOME/lib64 ${MKLLIB}"
+    ARG_LDFLAGS="-L$SUSHI_BREW_DIR -Wl,-rpath-link,$SUSHI_BREW_DIR ${MKLLIB}"
     ARG_CFLAGS="$DEBUG_COMPILER_FLAGS -I$BREWHOME/include ${MKLCFLAGS}"
     ARG_CXXFLAGS="$DEBUG_COMPILER_FLAGS -I$BREWHOME/include ${MKLCFLAGS}"
-    ARG_LD_LIBRARY_PATH=$BREWHOME/lib:$BREWHOME/lib64:$LD_LIBRARY_PATH
-    M4FOLDER=m4.2.69
-    BOOST_LIBDIR=$BREWHOME/lib64
+    ARG_LD_LIBRARY_PATH=$BREWHOME/lib:$SUSHI_BREW_DIR:$LD_LIBRARY_PATH
+    M4FOLDER=m4
+    BOOST_LIBDIR=$SUSHI_BREW_DIR
 elif [[ $ARG == "sushi.release" ]] ; then
-    ARG_LDFLAGS="-L$BREWHOME/lib64 -Wl,-rpath-link,$BREWHOME/lib64 ${MKLLIB}"
+    ARG_LDFLAGS="-L$SUSHI_BREW_DIR -Wl,-rpath-link,$SUSHI_BREW_DIR ${MKLLIB}"
     ARG_CFLAGS="$DEBUG_COMPILER_FLAGS -I$BREWHOME/include ${MKLCFLAGS}"
     ARG_CXXFLAGS="$DEBUG_COMPILER_FLAGS -I$BREWHOME/include ${MKLCFLAGS}"
-    ARG_LD_LIBRARY_PATH=$BREWHOME/lib:$BREWHOME/lib64:$LD_LIBRARY_PATH
-    M4FOLDER=m4.2.69
-    BOOST_LIBDIR=$BREWHOME/lib64
+    ARG_LD_LIBRARY_PATH=$BREWHOME/lib:$SUSHI_BREW_DIR:$LD_LIBRARY_PATH
+    M4FOLDER=m4
+    BOOST_LIBDIR=$SUSHI_BREW_DIR
 elif [[ $ARG == "ubuntu.debug" ]] ; then
     ARG_CC=$HOME/local/bin/gcc
     ARG_CXX=$HOME/local/bin/g++
